@@ -24,6 +24,7 @@ COPY package.json /opt/app/package.json
 
 WORKDIR /opt/app
 
+RUN rm -rf node_modules
 RUN npm install \
     && npm cache clean
 
