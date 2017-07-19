@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       ca-certificates \
       curl \
       git \
-      python-software-properties \
 	  nodejs \
 	  build-essential
 
