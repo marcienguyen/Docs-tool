@@ -11,14 +11,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	  nodejs \
 	  build-essential
 
-# this is faster via npm run build-docker
-COPY package.json ./package.json
-RUN npm install \
-    && npm cache clean
+RUN mkdir -p /opt/app/configs
 
 # Copy source over and create configs dir
-COPY . .
-RUN mkdir -p /configs
+COPY . /opt/app/
+COPY package.json /opt/app/package.json
+
+WORKDIR /opt/app
+
+RUN npm install \
+    && npm cache clean
 
 EXPOSE 8080
 ENV NODE_ENV=production
