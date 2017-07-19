@@ -8,8 +8,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       ca-certificates \
       curl \
       git \
-	  nodejs \
-	  build-essential
+      nodejs \
+      npm install npm@latest -g \
+      build-essential
 
 RUN mkdir -p /opt/app/configs
 
