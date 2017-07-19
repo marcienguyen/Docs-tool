@@ -9,9 +9,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       curl \
       git \
       build-essential
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
-      apt-get install -y nodejs
 
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+RUN apt-get install -y nodejs
 # update npm
 RUN npm i -g npm
 
