@@ -9,8 +9,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       curl \
       git \
       nodejs \
-      npm i -g npm \
       build-essential
+      
+RUN npm i -g npm
 
 RUN mkdir -p /opt/app/configs
 
