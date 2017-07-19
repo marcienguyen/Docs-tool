@@ -24,7 +24,7 @@ WORKDIR /opt/app
 
 RUN rm -rf node_modules
 RUN npm install \
-    && npm cache clean
+    && npm cache clean --force
 
 EXPOSE 8080
 ENV NODE_ENV=production
