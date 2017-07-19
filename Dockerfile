@@ -2,15 +2,16 @@ FROM debian:latest
 
 LABEL maintainer "Robert <mrthinlt@gmail.com>"
 
-#
+# install app
 RUN apt-get update && apt-get install -y --no-install-recommends \
       bzip2 \
       ca-certificates \
       curl \
       git \
-      nodejs \
+      nodejs npm \
       build-essential
-      
+
+# update npm
 RUN npm i -g npm
 
 RUN mkdir -p /opt/app/configs
