@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:8.8
 
 LABEL maintainer "Robert <mrthinlt@gmail.com>"
 
@@ -8,8 +8,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       ca-certificates \
       curl \
       git \
-      nodejs npm \
       build-essential
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
+      apt-get install -y nodejs
 
 # update npm
 RUN npm i -g npm
