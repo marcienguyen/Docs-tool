@@ -28,11 +28,12 @@ cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
 
 # start build
 echo "MkDocs build"
-cd ${MYAPP} && mkdocs build
+cd ${MYAPP} && mkdocs build -c
 
 # Copy html built to github
 echo "Copy html to github docs"
-cp -Rf ${MYAPP}/site/* ${MYDOCS}/docs/
+git clone https://github.com/Magestore/Docs.git /tmp/Docs
+cp -Rf ${MYAPP}/site/* /tmp/Docs/docs/
 cd ${MYDOCS} \
    && git add . \
    && git commit -m "Build documents" \
