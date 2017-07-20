@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       ca-certificates \
       curl \
       git \
-      cron
+      cron \
+      vim
 
 #RUN apt-get install -y sudo
 
