@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/sh
 
 MYAPP=/mkdocs/app
 MYDOCS=/mkdocs/my-docs
