@@ -26,7 +26,7 @@ RUN pip install mkdocs
 RUN mkdocs --version
 
 # Install cronjob
-RUN echo "* * * * * /bin/sh /mkdocs/app/mkdocs_build.sh 2>&1 1>/dev/null" >> /etc/crontab"
+RUN echo "* * * * * /bin/sh /mkdocs/app/mkdocs_build.sh 2>&1 1>/dev/null" >> /etc/crontab
 
 ENV PORT=8002
 
