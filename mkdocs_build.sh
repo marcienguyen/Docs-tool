@@ -28,5 +28,5 @@ cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
 
 # start build
 echo "MkDocs build"
-cd ${MYAPP} && sudo mkdocs build --clean
+cd ${MYAPP} && sudo mkdocs build
 cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
