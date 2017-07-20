@@ -10,5 +10,7 @@
 
 ## If run one time and see what are runnings
 ```
-  # docker run -it --rm -p 8002:8002 --name docs_tool docs_tool  
+  # docker build -t docs_tool . \
+    && docker stop docs_tool && docker container rm docs_tool \
+    && docker run -it --rm -p 8002:8002 --name docs_tool docs_tool  
 ```
