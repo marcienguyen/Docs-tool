@@ -1,4 +1,4 @@
-FROM debian:8.8
+FROM python:3.6
 
 LABEL maintainer "Robert <mrthinlt@gmail.com>"
 
@@ -7,26 +7,26 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       bzip2 \
       ca-certificates \
       curl \
-      git \
-      build-essential
+      git
 
-RUN apt-get install -y sudo
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-RUN apt-get install -y nodejs
+#RUN apt-get install -y sudo
 
-RUN mkdir -p /opt/app/configs
+RUN mkdir -p /mkdocs
 
 # Copy source over and create configs dir
-COPY . /opt/app/
-COPY package.json /opt/app/package.json
+COPY . /mkdocs/
 
-WORKDIR /opt/app
+WORKDIR /mkdocs
 
-RUN rm -rf node_modules
-RUN npm install \
-    && npm cache clean --force
 
-EXPOSE 8080
-ENV NODE_ENV=production
+# Install Mkdocs http://www.mkdocs.org/#installation
+RUN python get-pip.py
+RUN pip install --upgrade pip
+RUN pip install mkdocs
+RUN mkdocs --version
 
-CMD ["npm", "start"]
+ENV PORT=8002
+
+EXPOSE $PORT
+
+CMD ["/bin/sh", "app.sh"]
