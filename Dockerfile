@@ -4,8 +4,6 @@ LABEL maintainer "Robert <mrthinlt@gmail.com>"
 
 # install app
 RUN apt-get update && apt-get install -y --no-install-recommends \
-      bzip2 \
-      ca-certificates \
       curl \
       git \
       cron \
