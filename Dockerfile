@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       curl \
       git \
       cron \
-      vim
+      vim \
+      rsync
 
 #RUN apt-get install -y sudo
 
