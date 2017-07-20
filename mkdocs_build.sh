@@ -28,4 +28,5 @@ cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
 
 # start build
 echo "MkDocs build"
-cd ${MYAPP} && mkdocs build --dirty
+cd ${MYAPP} && mkdocs build --clean
+cd ${MYAPP} && mkdocs gh-deploy
