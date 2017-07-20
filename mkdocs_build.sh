@@ -28,7 +28,8 @@ cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
 
 # start build
 echo "MkDocs build"
-cd ${MYAPP} && mkdocs build -c
+cd ${MYAPP} && mkdocs build
+sleep 10
 
 # Copy html built to github
 echo "Copy from ${MYAPP}/site/* to /tmp/Docs/docs/"
