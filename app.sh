@@ -1,21 +1,21 @@
 #/bin/bash
 
-mkdocs new mkdocs_build
-
-#cd magestore_docs
+mkdocs new app
 
 # remote default doc
-rm ./mkdocs_build/docs/index.md
+rm ./app/docs/index.md
 
-#sed -i 's/site_name: \(.*\)/site_name: Magestore Docs/' ./mkdocs.yml
+#sed -i 's/site_name: \(.*\)/site_name: Magestore Docs/' ./app/mkdocs.yml
 
 # copy to replace default mkdocs.yml
-rm ./mkdocs_build/mkdocs.yml
-copy ./mkdocs.yml ./mkdocs_build/
+rm ./app/mkdocs.yml
+cp ./mkdocs.yml ./app/
 
-# clone magestore docs from github
-sh ./app-build.sh
+# clone docs from github and build
+cp ./mkdocs_build.sh ./app/
+cd ./app/
+/bin/sh ./mkdocs_build.sh
 
 # run mkdocs with port
-mkdocs serve -a 0.0.0.0:{$PORT}
+mkdocs serve -a 0.0.0.0:${PORT}
 
