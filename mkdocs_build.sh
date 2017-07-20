@@ -11,7 +11,12 @@ echo 'https://thinlt:3b56ffd5b88a495640a2ca29fc8583ca450bb141@github.com' > ~/.g
 
 # clone docs from github and build
 
-git clone https://github.com/Magestore/Docs.git ./my-docs
+if [ ! -d ./my-docs ]; then
+  git clone https://github.com/Magestore/Docs.git ./my-docs
+else
+  cd ./my-docs && git pull && cd ..
+fi
+
 
 cp -rf ./my-docs/extensions/* ./docs/
 
@@ -24,4 +29,3 @@ cd ./my-docs/ \
    && git add . \
    && git commit -m "Build documents" \
    && git push origin master
-
