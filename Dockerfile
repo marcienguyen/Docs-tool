@@ -2,6 +2,8 @@ FROM python:3.6
 
 LABEL maintainer "Robert <mrthinlt@gmail.com>"
 
+ENV GITHUB_TOKEN 3b56ffd5b88a495640a2ca29fc8583ca450bb141
+
 # install app
 RUN apt-get update && apt-get install -y --no-install-recommends \
       sudo \
