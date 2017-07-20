@@ -1,6 +1,6 @@
 site_name: Magestore Docs
 
-page:
+pages:
    - Home: index.md
 
 site_url: https://docs.magestore.com
