@@ -9,12 +9,11 @@ rm ./app/docs/index.md
 
 # copy to replace default mkdocs.yml
 rm ./app/mkdocs.yml
-cp ./mkdocs.yml ./app/
+cp -f ./mkdocs.yml ./app/
 
 # clone docs from github and build
-cp ./mkdocs_build.sh ./app/
-cd ./app/
-/bin/sh ./mkdocs_build.sh
+cp -f ./mkdocs_build.sh ./app/
+cd ./app/ && /bin/sh ./mkdocs_build.sh
 
 # run mkdocs with port
 mkdocs serve -a 0.0.0.0:${PORT}
