@@ -9,7 +9,7 @@ git config --global credential.helper store
 git config --global user.email "mrthinlt@gmail.com"
 git config --global user.name "Mkdocs tool"
 
-echo 'https://thinlt:3b56ffd5b88a495640a2ca29fc8583ca450bb141@github.com' > ~/.git-credentials
+echo 'https://thinlt:${GITHUB_TOKEN}@github.com' > ~/.git-credentials
 
 
 # clone docs from github and build
@@ -29,4 +29,4 @@ cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
 # start build
 echo "MkDocs build"
 cd ${MYAPP} && sudo mkdocs build --clean
-cd ${MYAPP} && sudo mkdocs gh-deploy -q --force
+cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
