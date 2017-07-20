@@ -39,3 +39,4 @@ cd /tmp/Docs \
    && git add . \
    && git commit -m "Build documents" \
    && git push origin master
+rm -rf /tmp/Docs
