@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       bzip2 \
       ca-certificates \
       curl \
-      git
+      git \
+      cron
 
 #RUN apt-get install -y sudo
 
@@ -27,6 +28,7 @@ RUN mkdocs --version
 
 # Install cronjob
 RUN echo "* * * * * /bin/sh /mkdocs/app/mkdocs_build.sh 2>&1 1>/dev/null" >> /etc/crontab
+RUN service cron restart
 
 ENV PORT=8002
 
