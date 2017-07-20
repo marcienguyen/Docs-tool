@@ -19,4 +19,4 @@ cd ./app/ && /bin/sh ./mkdocs_build.sh
 service cron restart
 
 # run mkdocs with port
-mkdocs serve -a 0.0.0.0:${PORT}
+mkdocs serve -a 0.0.0.0:${PORT} --dirtyreload
