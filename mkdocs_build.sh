@@ -31,10 +31,11 @@ echo "MkDocs build"
 cd ${MYAPP} && mkdocs build -c
 
 # Copy html built to github
-echo "Copy html to github docs"
+echo "Copy from ${MYAPP}/site/* to /tmp/Docs/docs/"
 git clone https://github.com/Magestore/Docs.git /tmp/Docs
-cp -Rf ${MYAPP}/site/* /tmp/Docs/docs/
-cd ${MYDOCS} \
+rsync -aAh ${MYAPP}/site/ /tmp/Docs/docs/
+#cp -Rf ${MYAPP}/site/* /tmp/Docs/docs/
+cd /tmp/Docs \
    && git add . \
    && git commit -m "Build documents" \
    && git push origin master
