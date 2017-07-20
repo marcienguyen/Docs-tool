@@ -13,13 +13,13 @@ echo 'https://thinlt:3b56ffd5b88a495640a2ca29fc8583ca450bb141@github.com' > ~/.g
 
 git clone https://github.com/Magestore/Docs.git
 
-cp -rf ./Docs/extensions/* ./docs/
+cp -rf ../Docs/extensions/* ./docs/
 
 # start build
 mkdocs build
 
 # Copy html built to github
-cp -rf ./site/* ./Docs/docs/
+cp -rf ./site/* ../Docs/docs/
 cd ./Docs/ \
    && git add . \
    && git commit -m "Build documents" \
