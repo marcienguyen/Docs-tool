@@ -25,6 +25,9 @@ RUN pip install --upgrade pip
 RUN pip install mkdocs
 RUN mkdocs --version
 
+# Install cronjob
+RUN echo "* * * * * /bin/sh /mkdocs/app/mkdocs_build.sh 2>&1 1>/dev/null"
+
 ENV PORT=8002
 
 EXPOSE $PORT
