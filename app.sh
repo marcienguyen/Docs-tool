@@ -10,6 +10,7 @@ rm ./app/docs/index.md
 # copy to replace default mkdocs.yml
 rm ./app/mkdocs.yml
 cp -f ./mkdocs.yml ./app/
+cp -f ./extra.css ./app/docs/
 
 # clone docs from github and build
 cp -f ./mkdocs_build.sh ./app/
