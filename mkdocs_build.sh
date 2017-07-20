@@ -20,7 +20,7 @@ mkdocs build
 
 # Copy html built to github
 cp -rf ./site/* ./my-docs/docs/
-cd ./Docs/ \
+cd ./my-docs/ \
    && git add . \
    && git commit -m "Build documents" \
    && git push origin master
