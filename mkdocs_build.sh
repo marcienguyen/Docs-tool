@@ -14,17 +14,19 @@ echo 'https://thinlt:3b56ffd5b88a495640a2ca29fc8583ca450bb141@github.com' > ~/.g
 if [ ! -d ./my-docs ]; then
   git clone https://github.com/Magestore/Docs.git ./my-docs
 else
-  cd ./my-docs && git pull && cd ..
+  cd ./my-docs && git pull
+  cd ..
 fi
 
-
-cp -rf ./my-docs/extensions/* ./docs/
+echo "Copy from ./my-docs/extensions/ to ./docs/"
+cp -ri ./my-docs/extensions/* ./docs/
 
 # start build
+echo "MkDocs build"
 mkdocs build
 
 # Copy html built to github
-cp -rf ./site/* ./my-docs/docs/
+cp -ri ./site/* ./my-docs/docs/
 cd ./my-docs/ \
    && git add . \
    && git commit -m "Build documents" \
