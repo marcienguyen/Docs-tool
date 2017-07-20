@@ -28,4 +28,4 @@ cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
 
 # start build
 echo "MkDocs build"
-cd ${MYAPP} && mkdocs build
+cd ${MYAPP} && mkdocs build --dirty
