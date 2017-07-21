@@ -1,7 +1,7 @@
 #/bin/bash
 
 # set environment to instance (use for cronjob script)
-setenv GITHUB_TOKEN ${GITHUB_TOKEN}
+export GITHUB_TOKEN=${GITHUB_TOKEN}
 
 mkdocs new app
 
