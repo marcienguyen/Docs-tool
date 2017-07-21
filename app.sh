@@ -7,7 +7,7 @@ export GITHUB_TOKEN=${GITHUB_TOKEN}
 git config --global credential.helper store
 git config --global user.email "mrthinlt@gmail.com"
 git config --global user.name "Mkdocs tool"
-echo 'https://thinlt:${GITHUB_TOKEN}@github.com' > /root/.git-credentials
+echo "https://thinlt:${GITHUB_TOKEN}@github.com" > /root/.git-credentials
 echo ${GITHUB_TOKEN} > ./GITHUB_TOKEN
 
 # create mkdocs app
