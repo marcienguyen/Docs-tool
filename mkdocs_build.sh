@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Build date -------- ( ${date} ) ---------"
+
 MYAPP=/mkdocs/app
 MYDOCS=/mkdocs/my-docs
 
@@ -35,4 +37,5 @@ echo "Build infomations:"
 echo "Token thinlt:${GITHUB_TOKEN}"
 echo "My app dir ${MYAPP}"
 echo "My docs dir ${MYDOCS}"
+echo "---------------------"
 exit
