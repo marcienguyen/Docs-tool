@@ -11,9 +11,12 @@ rm ./app/docs/index.md
 rm ./app/mkdocs.yml
 cp -f ./mkdocs.yml ./app/
 cp -rf ./docs/* ./app/docs/
+mkdir ./custom_theme
 
 # clone docs from github and build
 cp -f ./mkdocs_build.sh ./app/
+
+# run build script
 cd ./app/ && /bin/sh ./mkdocs_build.sh
 
 service cron restart
