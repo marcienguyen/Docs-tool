@@ -9,7 +9,7 @@ MYDOCS=/mkdocs/my-docs
 # check token exist
 GITHUB_TOKEN=$( cat ${WORKDIR}/GITHUB_TOKEN )
 if [ $GITHUB_TOKEN != '' ]; then
-  if [ $( grep -c 'http' /root/.git-credentials ) eq 0 ]; then
+  if [ $( grep -c 'http' /root/.git-credentials ) -eq 0 ]; then
     echo 'https://thinlt:${GITHUB_TOKEN}@github.com' > /root/.git-credentials
     echo "Write token"
   fi
