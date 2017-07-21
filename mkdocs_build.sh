@@ -24,7 +24,7 @@ cd ${MYAPP} && sudo mkdocs build
 cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
 
 echo "Build infomations:"
-echo "Token thinlt:${GITHUB_TOKEN}"
+echo "Token: " && cat ~/.git-credentials
 echo "My app dir ${MYAPP}"
 echo "My docs dir ${MYDOCS}"
 echo "---------------------"
