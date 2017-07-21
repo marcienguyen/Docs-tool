@@ -5,17 +5,7 @@ echo "Build date -------- ( $(date) ) ---------"
 MYAPP=/mkdocs/app
 MYDOCS=/mkdocs/my-docs
 
-# prepare github access token
-
-git config --global credential.helper store
-git config --global user.email "mrthinlt@gmail.com"
-git config --global user.name "Mkdocs tool"
-
-echo 'https://thinlt:${GITHUB_TOKEN}@github.com' > ~/.git-credentials
-
-
 # clone docs from github and build
-
 if [ ! -d $MYDOCS ]; then
   echo "Clone from github"
   git clone https://github.com/Magestore/Docs.git $MYDOCS
