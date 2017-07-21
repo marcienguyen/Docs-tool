@@ -7,6 +7,8 @@ site_description:
 site_author: mrthinlt@gmail.com
 copyright: Magestore.com
 google_analytics: null
+theme: readthedocs
+theme_dir: 'custom_theme'
 extra_css:
     - css/extra.css
 extra_javascript: []
