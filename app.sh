@@ -34,4 +34,4 @@ cd ./app/ && /bin/sh ./mkdocs_build.sh
 sudo /etc/init.d/cron restart
 
 # run mkdocs with port
-mkdocs serve -a 0.0.0.0:${PORT} --dirtyreload
+#mkdocs serve -a 0.0.0.0:${PORT} --dirtyreload
