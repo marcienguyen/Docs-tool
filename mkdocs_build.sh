@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "           ------------------------------"
 echo "Build date -------- ( $(date) ) ---------"
 
 WORKDIR=/mkdocs
