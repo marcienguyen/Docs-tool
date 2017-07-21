@@ -35,6 +35,18 @@ cd ${MYAPP} && sudo mkdocs build
 
 cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
 
+# Copy html built and push to github
+echo "Copy from ${MYAPP}/site/* to /tmp/Docs/docs/"
+git clone https://github.com/Magestore/Docs.git /tmp/Docs
+rsync -aAh ${MYAPP}/site/ /tmp/Docs/docs/
+
+cd /tmp/Docs \
+   && git add . \
+   && git commit -m "Build documents" \
+   && git push origin master
+
+rm -rf /tmp/Docs
+
 echo "Build infomations:"
 echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
 echo "Token: $( cat /root/.git-credentials )"
