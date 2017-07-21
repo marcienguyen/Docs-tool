@@ -6,6 +6,14 @@ WORKDIR=/mkdocs
 MYAPP=/mkdocs/app
 MYDOCS=/mkdocs/my-docs
 
+# check token exist
+GITHUB_TOKEN=$( cat ${WORKDIR}/GITHUB_TOKEN )
+if [ $GITHUB_TOKEN != '' ]; then
+  if [ $( cat /root/.git-credentials ) == '' ]; then
+    echo 'https://thinlt:${GITHUB_TOKEN}@github.com' > /root/.git-credentials
+  fi
+fi
+
 # clone docs from github and build
 if [ ! -d $MYDOCS ]; then
   echo "Clone from github"
@@ -22,12 +30,12 @@ cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
 # start build
 echo "MkDocs build"
 cd ${MYAPP} && sudo mkdocs build
-GITHUB_TOKEN=$( cat ${WORKDIR}/GITHUB_TOKEN )
+
 cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
 
 echo "Build infomations:"
 echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
-echo "Token: " && cat ~/.git-credentials
+echo "Token: " && cat /root/.git-credentials
 echo "My app dir ${MYAPP}"
 echo "My docs dir ${MYDOCS}"
 echo "---------------------"
