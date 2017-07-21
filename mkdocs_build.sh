@@ -12,7 +12,7 @@ GITHUB_TOKEN=$( cat ${WORKDIR}/GITHUB_TOKEN )
 if [ $GITHUB_TOKEN != '' ]; then
   if [ $( grep -c 'http' /root/.git-credentials ) -eq 0 ]; then
     echo "Write token ${GITHUB_TOKEN} to /root/.git-credentials"
-    echo "https://thinlt:${GITHUB_TOKEN}@github.com" > /root/.git-credentials
+    sudo echo "https://thinlt:${GITHUB_TOKEN}@github.com" > /root/.git-credentials
   fi
 fi
 
