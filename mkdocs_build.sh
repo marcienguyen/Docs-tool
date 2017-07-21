@@ -10,8 +10,8 @@ MYDOCS=/mkdocs/my-docs
 GITHUB_TOKEN=$( cat ${WORKDIR}/GITHUB_TOKEN )
 if [ $GITHUB_TOKEN != '' ]; then
   if [ $( grep -c 'http' /root/.git-credentials ) -eq 0 ]; then
-    echo 'https://thinlt:${GITHUB_TOKEN}@github.com' > /root/.git-credentials
-    echo "Write token"
+    echo "Write token ${GITHUB_TOKEN} to /root/.git-credentials"
+    echo "https://thinlt:${GITHUB_TOKEN}@github.com" > /root/.git-credentials
   fi
 fi
 
@@ -36,7 +36,7 @@ cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_T
 
 echo "Build infomations:"
 echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
-echo "Token: " && cat /root/.git-credentials
+echo "Token: $( cat /root/.git-credentials )"
 echo "My app dir ${MYAPP}"
 echo "My docs dir ${MYDOCS}"
 echo "---------------------"
