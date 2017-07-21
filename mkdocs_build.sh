@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Build date -------- ( ${date} ) ---------"
+echo "Build date -------- ( $(date) ) ---------"
 
 MYAPP=/mkdocs/app
 MYDOCS=/mkdocs/my-docs
