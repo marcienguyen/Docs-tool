@@ -30,13 +30,13 @@ echo "Copy from ${MYDOCS}/extensions/ to ${MYAPP}/docs/"
 cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
 
 # stop mkdocs
-ps c | grep mkdocs | awk '{print $1}' | xargs kill -9
+#ps c | grep mkdocs | awk '{print $1}' | xargs kill -9
 # start build
 echo "MkDocs build"
 cd ${MYAPP} && sudo mkdocs build
 cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
 # start mkdocs
-mkdocs serve -a 0.0.0.0:8002
+#mkdocs serve -a 0.0.0.0:8002
 
 # Copy html built and push to github
 echo "Copy from ${MYAPP}/site/* to /tmp/Docs/docs/"
