@@ -2,6 +2,7 @@
 
 echo "Build date -------- ( $(date) ) ---------"
 
+WORKDIR=/mkdocs
 MYAPP=/mkdocs/app
 MYDOCS=/mkdocs/my-docs
 
@@ -21,9 +22,11 @@ cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
 # start build
 echo "MkDocs build"
 cd ${MYAPP} && sudo mkdocs build
+GITHUB_TOKEN=$( cat ${WORKDIR}/GITHUB_TOKEN )
 cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
 
 echo "Build infomations:"
+echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
 echo "Token: " && cat ~/.git-credentials
 echo "My app dir ${MYAPP}"
 echo "My docs dir ${MYDOCS}"
