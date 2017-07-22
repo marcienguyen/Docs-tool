@@ -18,11 +18,23 @@ rm ./app/docs/index.md
 
 #sed -i 's/site_name: \(.*\)/site_name: Magestore Docs/' ./app/mkdocs.yml
 
+# rebuild from github
+if [ "${RE_BUILD:-0}" ]; then
+  git clone ${RE_BUILD} ./docs-tool
+  cp -rf ./docs-tool/* .
+fi
+
 # copy to replace default mkdocs.yml
 rm ./app/mkdocs.yml
 cp -f ./mkdocs.yml ./app/
 cp -rf ./docs/* ./app/docs/
-mkdir ./app/custom_theme
+
+if [ -d ./custom_theme ]; then
+  cp ./custom_theme ./app/
+else
+  mkdir -p ./app/custom_theme
+fi
+
 
 # clone docs from github and build
 cp -f ./mkdocs_build.sh ./app/
