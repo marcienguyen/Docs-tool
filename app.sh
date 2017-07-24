@@ -31,10 +31,10 @@ cp -rf ./docs/* ./app/docs/
 
 if [ -d ./custom_theme ]; then
   echo "Copy custom_theme"
-  mkdir -p ./app/theme-dir
-  cp -r ./theme-dir/* ./app/theme-dir/
+  mkdir -p ./app/mytheme
+  cp -r ./mytheme/* ./app/mytheme/
 else
-  mkdir -p ./app/theme-dir
+  mkdir -p ./app/mytheme
 fi
 
 

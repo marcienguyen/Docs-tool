@@ -9,7 +9,7 @@ copyright: Magestore.com
 google_analytics: null
 site_favicon: static/favicon.ico
 #theme: readthedocs
-theme_dir: 'theme-dir'
+theme_dir: 'mytheme'
 extra_css:
     - css/extra.css
 extra_javascript: []
