@@ -19,7 +19,7 @@ rm ./app/docs/index.md
 #sed -i 's/site_name: \(.*\)/site_name: Magestore Docs/' ./app/mkdocs.yml
 
 # rebuild from github
-if [ "${RE_BUILD:-0}" ]; then
+if [ "${RE_BUILD:-}" ]; then
   git clone ${RE_BUILD} ./docs-tool
   cp -rf ./docs-tool/* .
 fi
