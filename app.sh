@@ -29,7 +29,7 @@ rm ./app/mkdocs.yml
 cp -f ./mkdocs.yml ./app/
 cp -rf ./docs/* ./app/docs/
 
-if [ -d ./custom_theme ]; then
+if [ -d ./mytheme ]; then
   echo "Copy custom_theme"
   mkdir -p ./app/mytheme
   cp -r ./mytheme/* ./app/mytheme/
