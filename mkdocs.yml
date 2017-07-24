@@ -3,7 +3,7 @@ site_dir: /mkdocs/app/site
 site_url: https://docs.magestore.com
 repo_url: https://github.com/Magestore/Docs
 repo_name: 'GitHub'
-site_description:
+site_description: 'Magestore Documents'
 site_author: mrthinlt@gmail.com
 copyright: Magestore.com
 google_analytics: null
