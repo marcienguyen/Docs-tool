@@ -49,3 +49,6 @@ cd ./app/ && /bin/sh ./mkdocs_build.sh
 
 # run mkdocs with port
 #mkdocs serve -a 0.0.0.0:${PORT} --dirtyreload
+
+# wait for docker container running in minutes
+sleep 1000
