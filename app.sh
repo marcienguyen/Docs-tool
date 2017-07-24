@@ -43,7 +43,7 @@ cp -f ./mkdocs_build.sh ./app/
 cd ./app/ && /bin/sh ./mkdocs_build.sh
 
 #service cron restart
-sudo /etc/init.d/cron restart
+#sudo /etc/init.d/cron restart
 
 # run mkdocs with port
 #mkdocs serve -a 0.0.0.0:${PORT} --dirtyreload
