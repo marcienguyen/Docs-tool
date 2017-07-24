@@ -68,19 +68,19 @@
     <div class="container">
         {% block content %}
         <div class="col-md-3">
-            {% if meta.tags %}
+            {% if page.meta.tags %}
                 <div class="tags hidden-print" id="tags">
-                {% for tag in meta.tags %}
+                {% for tag in page.meta.tags %}
                     <span class="label label-info">{{ tag }}</span>
                 {% endfor %}
                 </div>
             {% endif %}
-            {% include "page.toc.html" %}
+            {% include "toc.html" %}
         </div>
         <div class="col-md-9" role="main">
             {% include "content.html" %}
             {% if config.extra.disqus %}
-                {% if meta.comments %}
+                {% if page.meta.comments %}
                     {% include "disqus.html" %}
                 {% endif %}
             {% endif %}
