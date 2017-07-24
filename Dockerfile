@@ -1,4 +1,4 @@
-FROM python:2.7.2
+FROM python:2.7
 
 LABEL maintainer "Robert <mrthinlt@gmail.com>"
 
