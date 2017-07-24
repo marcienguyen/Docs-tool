@@ -8,10 +8,12 @@ site_author: mrthinlt@gmail.com
 copyright: Magestore.com
 google_analytics: null
 site_favicon: static/favicon.ico
-theme: readthedocs
+#theme: readthedocs
 theme_dir: 'theme-dir'
 extra_css:
     - css/extra.css
 extra_javascript: []
 extra:
     version: 1.0
+markdown_extensions:
+    - markdown.extensions.smarty
