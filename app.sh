@@ -19,7 +19,7 @@ rm ./app/docs/index.md
 #sed -i 's/site_name: \(.*\)/site_name: Magestore Docs/' ./app/mkdocs.yml
 
 # rebuild from github
-if [ "${RE_BUILD:-0}" ]; then
+if [ "${RE_BUILD:-}" ]; then
   git clone ${RE_BUILD} ./docs-tool
   cp -rf ./docs-tool/* .
 fi
@@ -30,7 +30,9 @@ cp -f ./mkdocs.yml ./app/
 cp -rf ./docs/* ./app/docs/
 
 if [ -d ./custom_theme ]; then
-  cp ./custom_theme ./app/
+  echo "Copy custom_theme"
+  mkdir -p ./app/custom_theme
+  cp -r ./custom_theme/* ./app/custom_theme/
 else
   mkdir -p ./app/custom_theme
 fi
@@ -43,7 +45,7 @@ cp -f ./mkdocs_build.sh ./app/
 cd ./app/ && /bin/sh ./mkdocs_build.sh
 
 #service cron restart
-sudo /etc/init.d/cron restart
+#sudo /etc/init.d/cron restart
 
 # run mkdocs with port
 #mkdocs serve -a 0.0.0.0:${PORT} --dirtyreload
