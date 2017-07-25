@@ -51,7 +51,15 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateZ(0);
     z-index: 9999;
 }
-.navbar-default .navbar-nav>li>a {
+.navbar .navbar-left > .nav-item {
+
+}
+.navbar .navbar-left > .nav-item:hover > a, .navbar .navbar-left > .nav-item.active >a {
+    background: #fff;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.navbar .navbar-left > .nav-item > a {
     color: #333;
     position: relative;
     font-size: 14px;
@@ -60,67 +68,32 @@ h1, h2, h3, h4, h5, h6 {
     padding: 12px 12px;
     outline: 0;
     display: block;
+    text-decoration: none;
     border: 1px solid transparent;
+    z-index: 10;
 }
-.navbar-default .navbar-nav>li:hover>a {
-    background: #fff;
-    background-color: #fff;
-    border-color: #ccc;
-    z-index: 90;
+.navbar .navbar-left > .nav-item.dropdown:hover > a{
+    border-bottom: transparent;
 }
-.navbar-default .navbar-nav>li.active>a {
-    background: #fff;
+.navbar .navbar-left > .nav-item .dropdown-menu{
     background-color: #fff;
-    border-color: #ccc;
-    z-index: 90;
-}
-.navbar-nav>li>.dropdown-menu {
-    background-color: #fff;
-    border-color: #ccc;
     border: 1px solid #ccc;
-    margin-top: -1px;
+    margin-top: -2px;
     z-index: 9;
 }
-.navbar-default .nav li:hover > .dropdown-menu {
-    display: block;
+.navbar .navbar-left > .nav-item:hover > .dropdown-menu{
+    display:block;
 }
-.navbar-default .navbar-nav>li.dropdown>a:hover,
-.navbar-default .navbar-nav>li.dropdown>a:focus,
-.navbar-default .navbar-nav>.dropdown.active>a,
-.navbar-default .navbar-nav>.dropdown.active>a:hover {
-    background: #fff;
-    background-color: #fff;
-    border-color: #ccc;
-    z-index: 90;
+
+.navbar .navbar-left > .nav-item.dropdown .dropdown-menu a:hover {
+    /* background: #b8dcea; */
+    /* font-weight: normal; */
+    /* color: #333; */
 }
-.navbar-default .navbar-nav>.dropdown.active:hover>a,
-.navbar-default .navbar-nav>li.dropdown:hover>a
-{
-    border-bottom: none;
-}
-.navbar-default .dropdown-menu>.active>a {
-    background: #b8dcea;
-    font-weight: normal;
-    color: #333;
-}
-.navbar-default .dropdown-menu>.active>a:hover,
-.navbar-default .dropdown-menu>li>a:hover {
-    background: #DFF6FF;
-    font-weight: normal;
-    color: #333;
-}
-.navbar-default .dropdown li a {
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 8px 14px;
-    font-weight: normal;
-    line-height: 1.4;
-    border: none;
-}
-.navbar-default .dropdown.open li a:hover {
+.navbar .navbar-left > .nav-item.dropdown .dropdown-menu .dropdown-item.active {
     background: #DFF6FF;
 }
+
 .modal {
     position: fixed;
     top: 28px;
