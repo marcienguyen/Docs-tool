@@ -15,15 +15,12 @@
             {% for nav_item in nav %}
             {% if nav_item.children %}
             <li class="nav-item dropdown {% if nav_item.active %}active{% endif %}">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ nav_item.title }} <b class="caret"></b></a>
-
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nav_item.title }} <b class="caret"></b></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ nav_item.title }} <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     {% for nav_item in nav_item.children %}
                     {% include "nav-sub.html" %}
                     {% endfor %}
                 </ul>
-
             </li>
 
             {% else %}
@@ -81,7 +78,7 @@
             </li>-->
             {% endif %}
         </ul>
-        
+
     </div>
 </nav>
 
