@@ -163,9 +163,7 @@ header{
     z-index: 9;
     background-color: #000;
 }
-.navbar-default .navbar-right form .form-group{
-    margin-bottom: 0px;
-}
+
 #mkdocs-search-query {
     height: 56px;
     border: none;
@@ -174,28 +172,10 @@ header{
     font-weight: 400;
     margin-right: 80px;
 }
-.navbar-default .navbar-right .search-btn{
-    position: relative;
-    padding: 12px 12px;
-    display: block;
-    border: 1px solid transparent;
-    z-index: 2;
-    cursor: pointer;
-}
-.navbar-default .navbar-right .search-btn .fa-search{
-    position: absolute;
-    text-align: center;
-    top: 0;
-    right: 0;
-    width: 80px;
-    height: 55px;
-    background: #F1F1F1;
-    color: #333;
-    text-decoration: none;
-    font-size: 32px;
-    line-height: 55px;
-}
 .navbar .navbar-right .search-btn .fa-search-close{
+    display: none;
+}
+.navbar .navbar-right{
     display: none;
 }
 #form-search {
