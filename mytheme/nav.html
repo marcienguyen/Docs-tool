@@ -21,7 +21,7 @@
         <div class="navbar-collapse collapse">
             {% if nav|length>1 %}
                 <!-- Main navigation -->
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-left">
                 {% for nav_item in nav %}
                 {% if nav_item.children %}
                     <li class="dropdown{% if nav_item.active %} active{% endif %}">
@@ -50,8 +50,9 @@
                     </form>
                 </li>
                 <li>
-                    <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#mkdocs_search_modal">
+                    <a href="#">
                         <i class="fa fa-search"></i><!--<span>Search</span>-->
+                        <i class="fa fa-search-close">x</i>
                     </a>
                 </li>
                 {% if (page.next_page or page.previous_page) %}

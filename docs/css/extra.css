@@ -114,3 +114,39 @@ h1, h2, h3, h4, h5, h6 {
     content: "\f002";
     font-size: 28px;
 }
+.fa-search-close{
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 56px;
+    background: #F1F1F1;
+    color: #333;
+    text-decoration: none;
+    font-size: 32px;
+    line-height: 56px;
+}
+.search-backdrop {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #000;
+}
+.navbar-default .navbar-right form .form-group{
+    margin-bottom: 0px;
+}
+.navbar-default .navbar-right form .form-group #mkdocs-search-query {
+    height: 56px;
+    width: 910px;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
