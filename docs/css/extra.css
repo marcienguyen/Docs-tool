@@ -107,3 +107,6 @@ h1, h2, h3, h4, h5, h6 {
 #sideNav > ul > li > a:hover {
     background-color: #b7d4ff;
 }
+.container .col-md-9[role="main"] {
+    background-color: #fff;
+}

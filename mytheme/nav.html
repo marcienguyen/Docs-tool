@@ -44,11 +44,11 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
+                        <i class="fa fa-search"></i><!--<span>Search</span>-->
                     </a>
                 </li>
                 {% if (page.next_page or page.previous_page) %}
-                    <li {% if not page.previous_page %}class="disabled"{% endif %}>
+                    <!--<li {% if not page.previous_page %}class="disabled"{% endif %}>
                         <a rel="next" {% if page.previous_page %}href="{{ page.previous_page.url }}"{% endif %}>
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
@@ -57,10 +57,10 @@
                         <a rel="prev" {% if page.next_page %}href="{{ page.next_page.url }}"{% endif %}>
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
-                    </li>
+                    </li>-->
                 {% endif %}
                 {% if config.repo_url %}
-                    <li>
+                    <!--<li>
                         <a href="{{ config.repo_url }}">
                             {% if config.repo_name == 'GitHub' %}
                                 <i class="fa fa-github"></i>
@@ -69,7 +69,7 @@
                             {% endif %}
                             {{ config.repo_name }}
                         </a>
-                    </li>
+                    </li>-->
                 {% endif %}
             </ul>
         </div>
