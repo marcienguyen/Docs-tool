@@ -21,7 +21,17 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
     font-size: 22px;
     font-weight: 600;
-    margin-top: 4px;
+}
+.navbar .navbar-header .navbar-logo{
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 2px 20px;
+    float: left;
+}
+.navbar .navbar-header .navbar-logo > img{
+    /* width: 20px; */
+    height: 40px;
 }
 .navbar-default .navbar-collapse{
     margin-top: 4px;
