@@ -190,6 +190,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 #mkdocs-search-results > article h3 > a{
     color: #333;
+    font-family: "Open Sans","Helvetica","Arial",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
 }
 #mkdocs-search-results > article p{
     color: #333;
@@ -197,4 +200,5 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.625em;
     font-family: "Open Sans","Helvetica","Arial",sans-serif;
     font-size: 16px;
+    font-weight: 500;
 }
