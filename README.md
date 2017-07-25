@@ -27,3 +27,8 @@
 ```
   # docker run -it --rm -d --name docs_tool docs_tool
 ```
+
+## If only run and rebuild
+```
+  # docker run -it --rm -d --name docs_tool -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" docs_tool
+```
