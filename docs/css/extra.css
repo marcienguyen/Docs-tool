@@ -1,1 +1,102 @@
 /*Extra css*/
+body {
+    color: #333;
+    background-color: #fff;
+    font-family: "Open Sans","Helvetica","Arial",sans-serif;
+}
+h1 {
+    font-size: 38px;
+    line-height: 1.3;
+    color: #333;
+    font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizelegibility;
+}
+.navbar .navbar-header .navbar-brand{
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+}
+.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    background: #F1F1F1;
+    transition: box-shadow .1s;
+    box-shadow: 0 1px 2px transparent;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 9999;
+}
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
+    color: #333;
+    position: relative;
+    font-size: 14px;
+    background-clip: padding-box;
+    font-weight: 600;
+    padding: 12px 12px;
+    outline: 0;
+    display: block;
+    border: 1px solid transparent;
+    z-index: 2;
+}
+.navbar-default .dropdown-menu {
+    background-color: #fff;
+}
+.navbar-default .dropdown a:hover ~ .dropdown-menu {
+    display: block;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover{
+    background: #fff;
+    border-color: #ccc;
+}
+.navbar-default .dropdown-menu>.active>a,
+.navbar-default .dropdown-menu>.active>a:hover,
+.navbar-default .dropdown-menu>li>a:hover {
+    background: #fff;
+}
+.navbar-default .dropdown.open li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    border: none;
+}
+.navbar-default .dropdown.open li a:hover {
+    background: #DFF6FF;
+}
+.modal {
+    position: fixed;
+    top: 28px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+}
+#sideNav .bs-sidenav {
+    background: #F1F1F1;
+    padding: 10px 0 20px;
+    border-radius: 0px;
+}
+#sideNav > ul > li > a{
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.3em;
+    font-weight: normal;
+}
+#sideNav > ul > li > a:hover {
+    background-color: #b7d4ff;
+}
