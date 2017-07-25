@@ -166,3 +166,22 @@ h1, h2, h3, h4, h5, h6 {
 #form-search {
     display: none;
 }
+#mkdocs-search-results{
+    position: absolute;
+    top: 58px;
+    left: 0px;
+    width: 854px;
+    background-color: #fff;
+    z-index: 1031;
+    padding: 10px 20px;
+}
+#mkdocs-search-results > article h3 > a{
+    color: #333;
+}
+#mkdocs-search-results > article p{
+    color: #333;
+    line-height: 1.4;
+    margin: 0 0 0.625em;
+    font-family: "Open Sans","Helvetica","Arial",sans-serif;
+    font-size: 100%;
+}
