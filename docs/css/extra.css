@@ -14,6 +14,11 @@ h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizelegibility;
     color: #333;
 }
+header{
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+}
 .container-main{
     padding-top: 20px;
 }
@@ -80,20 +85,33 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #ccc;
     margin-top: -2px;
     z-index: 9;
+    width: 300px;
+    padding: 0px;
 }
 .navbar .navbar-left > .nav-item:hover > .dropdown-menu{
     display:block;
 }
-
+.dropdown-item:focus, .dropdown-item:hover{
+    background: #DFF6FF;
+    font-weight: normal;
+    color: #333;
+}
 .navbar .navbar-left > .nav-item.dropdown .dropdown-menu a:hover {
-    /* background: #b8dcea; */
-    /* font-weight: normal; */
-    /* color: #333; */
+    background: #DFF6FF;
+    font-weight: normal;
+    color: #333;
 }
 .navbar .navbar-left > .nav-item.dropdown .dropdown-menu .dropdown-item.active {
-    background: #DFF6FF;
+    background: #b8dcea;
 }
-
+.navbar .navbar-left > .nav-item.dropdown .dropdown-menu li > a{
+    line-height: 30px;
+    font-size: 16px;
+    color: #333;
+    min-height: 30px;
+    display: block;
+    padding: 5px 10px;
+}
 .modal {
     position: fixed;
     top: 28px;
