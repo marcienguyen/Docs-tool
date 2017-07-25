@@ -64,28 +64,6 @@ blockquote.pull-right {
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
-#mkdocs-search-query:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-#mkdocs-search-query {
-    font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: #343838;
-    height: 45px;
-}
-#mkdocs-search-results h3 {
-    font-size: 16px;
-    font-weight: 600;
-}
-#mkdocs-search-results {
-    font-size: 14px;
-}
-footer > hr {
-    width: 35%;
-}
 
 .modal-content {
     background-color: #012456;
