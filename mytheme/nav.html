@@ -16,7 +16,7 @@
                 {% for nav_item in nav %}
                 {% if nav_item.children %}
                 <li class="nav-item dropdown {% if nav_item.active %}active{% endif %}">
-                    <a data-toggle="dropdown" href="#">{{ nav_item.title }} <b class="caret"></b></a>
+                    <a data-toggle="dropdown" href="#">{{ nav_item.title }}</a>
                     <ul class="dropdown-menu">
                         {% for nav_item in nav_item.children %}
                         {% include "nav-sub.html" %}
