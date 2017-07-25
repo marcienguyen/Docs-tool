@@ -20,6 +20,7 @@ rm ./app/docs/index.md
 
 # rebuild from github
 if [ "${RE_BUILD:-}" ]; then
+  echo "Rebuild docs-tool"
   git clone ${RE_BUILD} ./docs-tool
   cp -rf ./docs-tool/* .
 fi

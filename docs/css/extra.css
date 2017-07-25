@@ -12,6 +12,7 @@ h1 {
 }
 h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizelegibility;
+    color: #333;
 }
 .navbar .navbar-header .navbar-brand{
     color: #333;
@@ -45,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default .dropdown-menu {
     background-color: #fff;
 }
-.navbar-default .dropdown a:hover ~ .dropdown-menu {
+.navbar-default .nav li:hover > .dropdown-menu {
     display: block;
 }
 .navbar-default .navbar-nav>.active>a,
@@ -58,10 +59,16 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
     border-color: #ccc;
 }
-.navbar-default .dropdown-menu>.active>a,
+.navbar-default .dropdown-menu>.active>a {
+    background: #b8dcea;
+    font-weight: normal;
+    color: #333;
+}
 .navbar-default .dropdown-menu>.active>a:hover,
 .navbar-default .dropdown-menu>li>a:hover {
-    background: #fff;
+    background: #DFF6FF;
+    font-weight: normal;
+    color: #333;
 }
 .navbar-default .dropdown.open li a {
     color: #333;
