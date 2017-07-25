@@ -1,6 +1,6 @@
 function reheightTags() {
     if (!(document.contains(document.getElementById("tags")))) {
-        document.getElementById("sideNav").style.top= "65px";
+        document.getElementById("sideNav").style.top= "75px";
     } else {
         var tagsHeight = document.getElementById("tags").clientHeight;
         var shiftHeight = tagsHeight + 57;
