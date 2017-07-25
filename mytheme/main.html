@@ -89,19 +89,23 @@
         {% endblock %}
     </div>
 
-    <footer class="col-md-12 text-center">
-        <hr>
-        {% if page %}
-            {% if config.extra.repo_branch %}
-            <p><a href="{{ config.repo_url }}{{ repo_doc_path }}/tree/{{ config.extra.repo_branch }}/docs/{{ page.input_path }}" class="icon icon-github"> Edit this page on GitHub</a></p>
-            {% else %}
-            <p><a href="{{ config.repo_url }}{{ repo_doc_path }}/tree/master/docs/{{ page.input_path }}" class="icon icon-github"> Edit this page on GitHub</a></p>
-            {% endif %}
-        {% endif %}
-        <p>{% if config.copyright %}
-        <small>{{ config.copyright }}<br></small>
-        {% endif %}
-        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-wrap col-md-12 text-center">
+                <hr>
+                {% if page %}
+                {% if config.extra.repo_branch %}
+                <p><a href="{{ config.repo_url }}{{ repo_doc_path }}/tree/{{ config.extra.repo_branch }}/docs/{{ page.input_path }}" class="icon icon-github"> Edit this page on GitHub</a></p>
+                {% else %}
+                <p><a href="{{ config.repo_url }}{{ repo_doc_path }}/tree/master/docs/{{ page.input_path }}" class="icon icon-github"> Edit this page on GitHub</a></p>
+                {% endif %}
+                {% endif %}
+                <p>{% if config.copyright %}
+                    <small>{{ config.copyright }}<br></small>
+                    {% endif %}
+                    <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+            </div>
+        </div>
     </footer>
 
     <script src="{{ base_url }}/js/jquery-1.10.2.min.js"></script>
