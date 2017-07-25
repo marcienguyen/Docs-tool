@@ -53,8 +53,12 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid transparent;
     z-index: 2;
 }
-.navbar-default .dropdown-menu {
+.navbar-nav>li>.dropdown-menu {
     background-color: #fff;
+    border-color: #ccc;
+    border: 1px solid #ccc;
+    margin-top: -1px;
+    z-index: 9;
 }
 .navbar-default .nav li:hover > .dropdown-menu {
     display: block;
@@ -70,6 +74,8 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
     background-color: #fff;
     border-color: #ccc;
+    border-bottom: none;
+    z-index: 90;
 }
 .navbar-default .dropdown-menu>.active>a {
     background: #b8dcea;
@@ -82,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     color: #333;
 }
-.navbar-default .dropdown.open li a {
+.navbar-default .dropdown li a {
     color: #333;
     text-decoration: none;
     font-size: 14px;
