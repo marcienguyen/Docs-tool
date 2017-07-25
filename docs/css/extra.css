@@ -208,6 +208,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 #mkdocs-search-results{
+    display: none;
     position: absolute;
     top: 58px;
     left: 0px;
