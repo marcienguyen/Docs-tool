@@ -157,6 +157,7 @@ header{
     text-decoration: none;
     font-size: 32px;
     line-height: 55px;
+    cursor: pointer;
 }
 .search-btn .fa-search-close {
     display: none;
@@ -166,11 +167,11 @@ header{
     opacity: .5;
     filter: alpha(opacity=50);
     position: fixed;
-    top: 0;
+    top: 55px;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1030;
+    z-index: 9;
     background-color: #000;
 }
 .navbar-default .navbar-right form .form-group{
@@ -219,11 +220,11 @@ header{
     left: 0px;
     height: 440px;
     background-color: #fff;
-    z-index: 1031;
+    z-index: 1000;
     padding: 10px 20px;
     overflow-y: scroll;
     padding-bottom: 200px;
-    padding-right: 80px;
+    margin-right: 80px;
 }
 #mkdocs-search-results > article h3 > a{
     color: #333;
