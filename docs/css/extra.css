@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default .navbar-nav>.open>a:focus,
 .navbar-default .navbar-nav>.open>a:hover{
     background: #fff;
+    background-color: #fff;
     border-color: #ccc;
 }
 .navbar-default .dropdown-menu>.active>a {
@@ -121,14 +122,15 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     right: 0;
     width: 80px;
-    height: 56px;
+    height: 55px;
     background: #F1F1F1;
     color: #333;
     text-decoration: none;
     font-size: 32px;
-    line-height: 56px;
+    line-height: 55px;
 }
 .search-backdrop {
+    display: none;
     opacity: .5;
     filter: alpha(opacity=50);
     position: fixed;
@@ -149,4 +151,18 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     font-size: 16px;
     font-weight: 400;
+}
+.navbar-default .navbar-right .search-btn{
+    position: relative;
+    padding: 12px 12px;
+    display: block;
+    border: 1px solid transparent;
+    z-index: 2;
+    cursor: pointer;
+}
+.navbar-default .navbar-right .search-btn .fa-search-close{
+    display: none;
+}
+#form-search {
+    display: none;
 }
