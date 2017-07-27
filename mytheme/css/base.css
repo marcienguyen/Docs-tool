@@ -49,13 +49,6 @@ div.tags {
     border-radius: 5px;
 }
 
-/* All levels of nav */
-.bs-sidebar .nav > li > a {
-    display: block;
-    color: #f5f5f5;
-    padding: 5px 20px;
-    z-index: 1;
-}
 
 .bs-sidebar .nav > li > a:hover,
 .bs-sidebar .nav > li > a:focus {

@@ -118,22 +118,6 @@ blockquote.pull-right {
     vertical-align: bottom;
     border-bottom: 2px solid darkgray;
 }
-.table-striped>tbody>tr:nth-child(even)>td, .table-striped>tbody>tr:nth-child(even)>th {
-    background-color: #386CB8;
-    color: #000;
-}
-.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
-    color: #000;
-}
-.table-striped th, .table-bordered th {
-    background-color: #386CB8;
-}
-.table-bordered {
-    border: 1px solid darkgray;
-}
-.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-    border: 1px solid darkgray;
-}
 
 .btn-primary {
     color: #fff;
