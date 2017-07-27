@@ -41,12 +41,12 @@ $(document).ready(function(){
     });
 
     //show hide sidebar
-    $('#sideNav > ul.bs-sidenav:before').toggle(function(){
+    $('#sideNav.bs-sidebar').toggle(function(){
         //$(this).hide();
-        $('#sideNav > ul.bs-sidenav').addClass('active');
+        $('#sideNav.bs-sidenav').addClass('active');
     }, function(){
         //$(this).hide();
-        $('#sideNav > ul.bs-sidenav').remove('active');
+        $('#sideNav.bs-sidenav').remove('active');
     });
 
     //calculate height of sidebar to fit with window height

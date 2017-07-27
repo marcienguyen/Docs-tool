@@ -274,6 +274,7 @@ header{
 
     /*Sidebar toggle*/
     .bs-sidebar.affix {
+        pointer-events: none;
         position: fixed;
         z-index: 9;
         left: -268px;
@@ -283,6 +284,7 @@ header{
         transform: translateX(268px);
     }
     .bs-sidebar.affix:before {
+        pointer-events: all;
         content: '>';
         font-size: 45px;
         top: 85px;
