@@ -7,8 +7,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         {% endif %}
-        <a class="navbar-logo" href="https://www.magestore.com/"><img src="{{ base_url }}/img/magestore-logo.png" alt="Magestore"></a>
-        <a class="navbar-brand" href="{{ nav.homepage.url }}">{{ config.site_name }}</a>
+        <div class="navbar-brand">
+            <a class="navbar-logo" href="https://www.magestore.com/"><img src="{{ base_url }}/img/magestore-logo.png" alt="Magestore"></a>
+            <span><a href="{{ nav.homepage.url }}">{{ config.site_name }}</a></span>
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             {% if nav|length>1 %}
