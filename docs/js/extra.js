@@ -43,9 +43,9 @@ $(document).ready(function(){
     //show hide sidebar
     $('#sideNav.bs-sidebar').click(function(){
         if(!$(this).hasClass('active')) {
-            $('#sideNav.bs-sidenav').addClass('active');
+            $(this).addClass('active');
         } else {
-            $('#sideNav.bs-sidenav').remove('active');
+            $(this).remove('active');
         }
     });
 
