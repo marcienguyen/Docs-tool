@@ -309,5 +309,6 @@ header{
     .bs-sidebar.nav-menu.active:before {
         left: 267px;
         content: '<';
+        top: 0px;
     }
 }
