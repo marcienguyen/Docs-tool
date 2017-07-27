@@ -47,15 +47,16 @@ $(document).ready(function(){
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
+    var wimHeight = $(window).height();
     $('ul.bs-sidenav li > a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        if (refElement.position().top < scrollPos + wimHeight) {
             $('ul.bs-sidenav li').removeClass("active");
             currLink.parent().addClass("active");
         }
         else{
-            currLink.parent().removeClass("active");
+            //currLink.parent().removeClass("active");
         }
     });
 }
