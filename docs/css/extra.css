@@ -273,17 +273,17 @@ header{
     }
 
     /*Sidebar toggle*/
-    .bs-sidebar.affix {
+    .bs-sidebar.nav-menu {
         pointer-events: none;
         position: fixed;
         z-index: 9;
         left: -268px;
         max-width: 268px;
     }
-    .bs-sidebar.affix.active {
+    .bs-sidebar.nav-menu.active {
         transform: translateX(268px);
     }
-    .bs-sidebar.affix:before {
+    .bs-sidebar.nav-menu:before {
         pointer-events: all;
         content: '>';
         font-size: 45px;
@@ -306,7 +306,7 @@ header{
         opacity: 0.5;
         cursor: pointer;
     }
-    .bs-sidebar.affix.active:before {
+    .bs-sidebar.nav-menu.active:before {
         left: 267px;
         content: '<';
     }
