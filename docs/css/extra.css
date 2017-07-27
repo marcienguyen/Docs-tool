@@ -85,8 +85,9 @@ header{
     border: 1px solid #ccc;
     margin-top: -2px;
     z-index: 9;
-    width: 300px;
+    min-width: 260px;
     padding: 0px;
+    border-radius: initial;
 }
 .navbar .navbar-left > .nav-item:hover > .dropdown-menu{
     display:block;
