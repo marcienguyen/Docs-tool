@@ -271,4 +271,41 @@ header{
     .dropdown-submenu:hover>.dropdown-menu {
         display: none;
     }
+
+    /*Sidebar toggle*/
+    .bs-sidebar.affix {
+        position: fixed;
+        z-index: 9;
+        left: -268px;
+        max-width: 268px;
+    }
+    .bs-sidebar.affix.active {
+        transform: translateX(268px);
+    }
+    .bs-sidebar.affix:before {
+        content: '>';
+        font-size: 45px;
+        top: 85px;
+        left: 0px;
+        z-index: 10;
+        background: #dadada;
+        position: fixed;
+        color: #fff;
+        font-family: monospace;
+        width: 30px;
+        height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 33px;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    .bs-sidebar.affix.active:before {
+        left: 267px;
+        content: '<';
+    }
 }

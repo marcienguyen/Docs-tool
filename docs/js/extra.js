@@ -40,6 +40,15 @@ $(document).ready(function(){
         });
     });
 
+    //show hide sidebar
+    $('#sideNav > ul.bs-sidenav:before').toggle(function(){
+        //$(this).hide();
+        $('#sideNav > ul.bs-sidenav').addClass('active');
+    }, function(){
+        //$(this).hide();
+        $('#sideNav > ul.bs-sidenav').remove('active');
+    });
+
     //back to Top
     if ($('#back-to-top').length) {
         var scrollTrigger = 100, // px
