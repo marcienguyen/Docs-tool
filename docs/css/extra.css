@@ -117,11 +117,16 @@ header{
     padding: 10px 0 20px;
     border-radius: 0px;
 }
+#sideNav .bs-sidenav li.first-level {
+    width: 100%;
+}
 #sideNav > ul > li > a{
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.3em;
     font-weight: normal;
+    /* display: block; */
+    /* width: 100%; */
 }
 #sideNav > ul > li > a:hover {
     background-color: #b7d4ff;
@@ -217,4 +222,7 @@ header{
     color: #A6ABB0;
     padding: 20px 0;
     font-size: 13px;
+}
+.dropdown-item {
+    padding: 0px;
 }
