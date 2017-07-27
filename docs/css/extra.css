@@ -279,9 +279,11 @@ header{
         z-index: 9;
         left: -268px;
         max-width: 268px;
+        transition-duration: 0.5s;
     }
     .bs-sidebar.nav-menu.active {
         transform: translateX(268px);
+        transition-duration: 0.5s;
     }
     .bs-sidebar.nav-menu:before {
         pointer-events: all;
@@ -309,6 +311,6 @@ header{
     .bs-sidebar.nav-menu.active:before {
         left: 267px;
         content: '<';
-        top: 0px;
+        top: 10px;
     }
 }
