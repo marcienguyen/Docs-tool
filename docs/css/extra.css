@@ -252,3 +252,10 @@ header{
 .dropdown-item {
     padding: 0px;
 }
+
+/*Fix mobile*/
+@media (max-width: 1024px) {
+    .main-content *[role="main"] img {
+        width: 100%!important;
+    }
+}
