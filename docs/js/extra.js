@@ -45,7 +45,7 @@ $(document).ready(function(){
         if(!$(this).hasClass('active')) {
             $(this).addClass('active');
         } else {
-            $(this).remove('active');
+            $(this).removeClass('active');
         }
     });
 
