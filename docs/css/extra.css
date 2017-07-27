@@ -259,3 +259,15 @@ header{
         width: 100%!important;
     }
 }
+/*Disable hover active menu*/
+@media (max-width: 992px) {
+    .navbar .navbar-left > .nav-item:hover > .dropdown-menu {
+        display: none;
+    }
+    .navbar .navbar-left > .nav-item.dropdown.show > .dropdown-menu {
+        display: block;
+    }
+    .dropdown-submenu:hover>.dropdown-menu {
+        display: none;
+    }
+}
