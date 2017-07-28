@@ -4,7 +4,7 @@ $(document).ready(function(){
         $(this).hide();
         $(".fa-search-close").show();
         $(".navbar .navbar-left").hide();
-        $(".navbar .navbar-right").show();
+        $(".navbar .search-box").show();
         $("#form-search").fadeIn();
         $("#mkdocs-search-results").fadeIn();
         $(".search-backdrop").show();
@@ -13,7 +13,7 @@ $(document).ready(function(){
         $(this).hide();
         $(".fa-search").show();
         $(".navbar .navbar-left").show();
-        $(".navbar .navbar-right").hide();
+        $(".navbar .search-box").hide();
         $("#form-search").hide();
         $("#mkdocs-search-results").fadeOut();
         $(".search-backdrop").fadeOut();
