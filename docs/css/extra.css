@@ -344,6 +344,6 @@ header{
         display: none;
     }
     .mobile-search-btn {
-        display: none;
+        display: block;
     }
 }
