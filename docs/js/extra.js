@@ -62,6 +62,8 @@ $(document).ready(function(){
         var padding_bott = sidenav.height() + sidenav.position().top - $(window).height();
         if (padding_bott > 200) {
             padding_bott = 200;
+        } else if (padding_bott < 50) {
+            padding_bott = 50;
         }
         sidenav.css({'height': ($(window).height() - sidenav.position().top) + 'px', 'overflow-y': 'scroll', 'padding-bottom': padding_bott+'px'});
     }
