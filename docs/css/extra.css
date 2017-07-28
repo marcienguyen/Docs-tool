@@ -207,6 +207,7 @@ header{
     overflow-y: scroll;
     padding-bottom: 200px;
     margin-right: 0px;
+    width: 100%;
 }
 #mkdocs-search-results > article h3 > a{
     color: #333;
