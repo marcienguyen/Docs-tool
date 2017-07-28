@@ -43,6 +43,8 @@ $(document).ready(function(){
     //hide sidebar when have only one item
     if ($('#sideNav > ul > li').length <= 1) {
         $('#sideNav').hide();
+    } else {
+        $('#sideNav').show();
     }
 
     //show hide sidebar

@@ -116,6 +116,7 @@ header{
     display: block;
     padding: 5px 10px;
 }
+#sideNav {display: none;}
 #sideNav .bs-sidenav {
     background: #F1F1F1;
     padding: 10px 0 20px;
