@@ -1,10 +1,4 @@
-{%
-count = 0
-for t_item in page.toc
-    count++
-endif
-%}
-{% if count > 1 %}
+{% if page.toc|length>1 %}
 <div class="bs-sidebar nav-menu" id="sideNav">
     <ul class="nav bs-sidenav">
     {% for toc_item in page.toc %}
