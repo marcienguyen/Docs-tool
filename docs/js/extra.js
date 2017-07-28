@@ -52,7 +52,7 @@ $(document).ready(function(){
     //calculate height of sidebar to fit with window height
     var sidenav = $('#sideNav .bs-sidenav');
     if (sidenav.height() + sidenav.position().top > $(window).height()) {
-        sidenav.css({'height': ($(window).height() - sidenav.position().top) + 'px', 'overflow-y': 'scroll'});
+        sidenav.css({'height': ($(window).height() - sidenav.position().top) + 'px', 'overflow-y': 'scroll', 'padding-bottom': '200px'});
     }
 
     //back to Top
