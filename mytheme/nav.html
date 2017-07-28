@@ -41,50 +41,50 @@
             </ul>
             {% endif %}
 
-            <div class="navbar-nav mr-auto navbar-right w-100 p-0">
-                <div class="container-fluid w-100 p-0">
-                    <div class="row">
-                        <div class="col col-md-12">
-                            <div class="nav-item item-search">
-                                <form class="form-inline w-100" id="form-search" role="form">
-                                    <input class="w-100" type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                                </form>
-                                <div id="mkdocs-search-results"><p>No results found</p></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="nav-item item-search">
+                    <form class="form-inline w-100" id="form-search" role="form">
+                        <input class="w-100" type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </form>
+                    <div id="mkdocs-search-results"><p>No results found</p></div>
                 </div>
+            </div>
 
-                <span class="search-btn">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <span class="search-btn">
                     <i class="fa fa-search"></i><!--<span>Search</span>-->
                     <i class="fa fa-search-close">x</i>
                 </span>
-
-                {% if (page.next_page or page.previous_page) %}
-                <!--<li {% if not page.previous_page %}class="disabled"{% endif %}>
-                    <a rel="next" {% if page.previous_page %}href="{{ page.previous_page.url }}"{% endif %}>
-                        <i class="fa fa-arrow-left"></i> Previous
-                    </a>
                 </li>
-                <li {% if not page.next_page %}class="disabled"{% endif %}>
-                    <a rel="prev" {% if page.next_page %}href="{{ page.next_page.url }}"{% endif %}>
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </li>-->
-                {% endif %}
-                {% if config.repo_url %}
-                <!--<li>
-                    <a href="{{ config.repo_url }}">
-                        {% if config.repo_name == 'GitHub' %}
-                            <i class="fa fa-github"></i>
-                        {% elif config.repo_name == 'Bitbucket' %}
-                            <i class="fa fa-bitbucket"></i>
-                        {% endif %}
-                        {{ config.repo_name }}
-                    </a>
-                </li>-->
-                {% endif %}
-            </div>
+                <li>
+                    {% if (page.next_page or page.previous_page) %}
+                    <!--<li {% if not page.previous_page %}class="disabled"{% endif %}>
+                        <a rel="next" {% if page.previous_page %}href="{{ page.previous_page.url }}"{% endif %}>
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li {% if not page.next_page %}class="disabled"{% endif %}>
+                        <a rel="prev" {% if page.next_page %}href="{{ page.next_page.url }}"{% endif %}>
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>-->
+                    {% endif %}
+                    {% if config.repo_url %}
+                    <!--<li>
+                        <a href="{{ config.repo_url }}">
+                            {% if config.repo_name == 'GitHub' %}
+                                <i class="fa fa-github"></i>
+                            {% elif config.repo_name == 'Bitbucket' %}
+                                <i class="fa fa-bitbucket"></i>
+                            {% endif %}
+                            {{ config.repo_name }}
+                        </a>
+                    </li>-->
+                    {% endif %}
+                </li>
+
+            </ul>
 
         </div>
     </nav>
