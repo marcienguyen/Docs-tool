@@ -70,6 +70,9 @@ $(document).ready(function(){
 
     //back to Top
     if ($('#back-to-top').length) {
+        //fixed by window viewport
+        $('#back-to-top').css({'left':($(window).width()-64)+'px', 'top':($(window).height()-64)+'px'});
+
         var scrollTrigger = 100, // px
             backToTop = function () {
                 var scrollTop = $(window).scrollTop();
