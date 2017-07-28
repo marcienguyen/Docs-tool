@@ -222,6 +222,10 @@ header{
     font-weight: 500;
 }
 .main-content {padding-top: 75px;}
+.protect-table {
+    width: 100%;
+    overflow-x: scroll;
+}
 
 /*Back to Top*/
 #back-to-top {

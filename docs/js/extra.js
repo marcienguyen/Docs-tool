@@ -19,6 +19,9 @@ $(document).ready(function(){
         $(".search-backdrop").fadeOut();
     });
 
+    //protect table width
+    $('.main-content div[role="main"] > table').wrap('<div class="protect-table"></div>');
+
     //Scroll app
     $(document).on("scroll", onScroll);
 
