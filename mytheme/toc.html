@@ -1,3 +1,4 @@
+{% page.toc|length>1 %}
 <div class="bs-sidebar nav-menu" id="sideNav">
     <ul class="nav bs-sidenav">
     {% for toc_item in page.toc %}
@@ -12,3 +13,4 @@
     {% endfor %}
     </ul>
 </div>
+{% endif %}

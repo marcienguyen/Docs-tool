@@ -27,6 +27,9 @@ header{
     font-size: 22px;
     font-weight: 600;
 }
+.navbar-brand a {
+    text-decoration: none;
+}
 .navbar .navbar-header .navbar-logo{
     color: #333;
     font-size: 22px;
@@ -118,6 +121,7 @@ header{
     padding: 10px 0 20px;
     border-radius: 0px;
     flex-direction: column;
+    position: fixed;
 }
 #sideNav .bs-sidenav > li {
     width: 100%;
