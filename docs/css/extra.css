@@ -59,8 +59,8 @@ header{
     transform: translateZ(0);
     z-index: 9999;
 }
-.navbar .navbar-left > .nav-item {
-
+.navbar-nav a {
+    text-decoration: none;
 }
 .navbar .navbar-left > .nav-item:hover > a, .navbar .navbar-left > .nav-item.active >a {
     background: #fff;
