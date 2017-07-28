@@ -123,6 +123,7 @@ header{
     border-radius: 0px;
     flex-direction: column;
     position: fixed;
+    min-width: 267px;
 }
 #sideNav .bs-sidenav > li {
     width: 100%;

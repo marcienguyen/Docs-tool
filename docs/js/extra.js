@@ -59,7 +59,11 @@ $(document).ready(function(){
     //calculate height of sidebar to fit with window height
     var sidenav = $('#sideNav .bs-sidenav');
     if (sidenav.height() + sidenav.position().top > $(window).height()) {
-        sidenav.css({'height': ($(window).height() - sidenav.position().top) + 'px', 'overflow-y': 'scroll', 'padding-bottom': '200px'});
+        var padding_bott = sidenav.height() + sidenav.position().top - $(window).height();
+        if (padding_bott > 200) {
+            padding_bott = 200;
+        }
+        sidenav.css({'height': ($(window).height() - sidenav.position().top) + 'px', 'overflow-y': 'scroll', 'padding-bottom': padding_bott+'px'});
     }
 
     //back to Top
