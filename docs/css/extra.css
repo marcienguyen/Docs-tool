@@ -283,12 +283,12 @@ header{
         /*pointer-events: none;*/
         position: fixed;
         z-index: 9;
-        left: -268px;
+        left: -282px;
         max-width: 268px;
         transition-duration: 0.5s;
     }
     .bs-sidebar.nav-menu.active {
-        transform: translateX(268px);
+        transform: translateX(282px);
         transition-duration: 0.5s;
     }
     .bs-sidebar.nav-menu:before {
