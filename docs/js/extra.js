@@ -26,7 +26,7 @@ $(document).ready(function(){
         $("#mkdocs-search-results").fadeIn();
         $(".search-backdrop").show();
     });
-    $(".mobile-search-btn .fa-search-close").click(function(){
+    $(".mobile-search-btn .mobile-search-close-btn").click(function(){
         $(this).hide();
         $(".mobile-search-btn .fa-search").show();
         $(".navbar .search-box").removeClass('mobile').hide();
