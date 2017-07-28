@@ -1,1 +1,0 @@
-app.jinja_env.add_extension('jinja2.ext.loopcontrols')
