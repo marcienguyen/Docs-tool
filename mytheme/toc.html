@@ -1,3 +1,4 @@
+{% for t_item in page.toc %}
 {% if loop.length>1 %}
 <div class="bs-sidebar nav-menu" id="sideNav">
     <ul class="nav bs-sidenav">
@@ -14,3 +15,5 @@
     </ul>
 </div>
 {% endif %}
+{% break %}
+{% endfor %}
