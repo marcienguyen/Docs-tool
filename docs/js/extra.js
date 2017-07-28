@@ -1,6 +1,6 @@
 /*jQuery function*/
 $(document).ready(function(){
-    $(".fa-search").click(function(){
+    $(".search-btn .fa-search").click(function(){
         $(this).hide();
         $(".fa-search-close").show();
         $(".navbar .navbar-left").hide();
@@ -9,11 +9,27 @@ $(document).ready(function(){
         $("#mkdocs-search-results").fadeIn();
         $(".search-backdrop").show();
     });
-    $(".fa-search-close").click(function(){
+    $(".search-btn .fa-search-close").click(function(){
         $(this).hide();
         $(".fa-search").show();
         $(".navbar .navbar-left").show();
         $(".navbar .search-box").hide();
+        $("#form-search").hide();
+        $("#mkdocs-search-results").fadeOut();
+        $(".search-backdrop").fadeOut();
+    });
+    $(".mobile-search-btn .fa-search").click(function(){
+        $(this).hide();
+        $(".mobile-search-btn .fa-search-close").show();
+        $(".navbar .search-box").addClass('mobile').show();
+        $("#form-search").fadeIn();
+        $("#mkdocs-search-results").fadeIn();
+        $(".search-backdrop").show();
+    });
+    $(".mobile-search-btn .fa-search-close").click(function(){
+        $(this).hide();
+        $(".mobile-search-btn .fa-search").show();
+        $(".navbar .search-box").removeClass('mobile').hide();
         $("#form-search").hide();
         $("#mkdocs-search-results").fadeOut();
         $(".search-backdrop").fadeOut();
