@@ -20,7 +20,7 @@ $(document).ready(function(){
     });
     $(".mobile-search-btn .fa-search").click(function(){
         $(this).hide();
-        $(".mobile-search-btn .fa-search-close").show();
+        $(".mobile-search-close-btn").show();
         $(".navbar .search-box").addClass('mobile').show();
         $("#form-search").fadeIn();
         $("#mkdocs-search-results").fadeIn();
