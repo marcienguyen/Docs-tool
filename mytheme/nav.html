@@ -57,9 +57,10 @@
                     <i class="fa fa-search-close">x</i>
                 </span>
                 </li>
-                <li>
-                    {% if (page.next_page or page.previous_page) %}
-                    <!--<li {% if not page.previous_page %}class="disabled"{% endif %}>
+
+                {% if (page.next_page or page.previous_page) %}
+                <!--<li>
+                    <li {% if not page.previous_page %}class="disabled"{% endif %}>
                         <a rel="next" {% if page.previous_page %}href="{{ page.previous_page.url }}"{% endif %}>
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
@@ -80,9 +81,10 @@
                             {% endif %}
                             {{ config.repo_name }}
                         </a>
-                    </li>-->
-                    {% endif %}
-                </li>
+                    </li>
+                </li>-->
+                {% endif %}
+
 
             </ul>
 
