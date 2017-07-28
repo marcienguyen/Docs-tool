@@ -278,7 +278,7 @@ header{
 
     /*Sidebar toggle*/
     .bs-sidebar.nav-menu {
-        pointer-events: none;
+        /*pointer-events: none;*/
         position: fixed;
         z-index: 9;
         left: -268px;
