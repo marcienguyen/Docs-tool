@@ -39,10 +39,11 @@ $(document).ready(function(){
     $(".menu li a").each(function() {
         if ($(this).next().length > 0) {
             $(this).addClass("parent");
+            $(this).addClass("more");
         };
     })
-    var menux = $('.menu li a.parent');
-    $( '<div class="more"></div>' ).insertBefore(menux);
+    //var menux = $('.menu li a.parent');
+    //$( '<div class="more"></div>' ).insertBefore(menux);
     $('.menu .more').click(function(){
         $(this).parent('li').toggleClass('open');
     });
