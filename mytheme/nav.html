@@ -2,8 +2,8 @@
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         {% if nav|length>1 or (page.next_page or page.previous_page) or config.repo_url %}
         <button class="navbar-toggler navbar-toggler-right" type="button"
-                data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                data-toggle="collapse" data-target="#navbar-head"
+                aria-controls="navbar-head" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         {% endif %}
@@ -12,7 +12,7 @@
             <span><a href="{{ nav.homepage.url }}">{{ config.site_name }}</a></span>
         </div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbar-head">
             <div class="col-sm-12 col-md-12 mobile-search-btn">
                 <span>
                     <i class="fa fa-search"></i>
@@ -21,7 +21,7 @@
             </div>
 
             {% if nav|length>1 %}
-            <ul class="nav navbar-nav navbar-left">
+            <ul class="navbar-nav mr-auto navbar-left">
                 {% for nav_item in nav %}
                 {% if nav_item.children %}
                 <li class="nav-item {% if nav_item.active %}active{% endif %}">
