@@ -5,7 +5,7 @@
     </li>
     {% else %}
     <li class="dropdown-submenu">
-        <a class="test" data-toggle="dropdown" tabindex="-1" href="#">{{ nav_item.title }}</a>
+        <a class="test" tabindex="-1" href="#">{{ nav_item.title }}</a>
         <ul class="dropdown-menu">
         {% for nav_item in nav_item.children %}
         {% include "nav-sub.html" %}
