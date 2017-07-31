@@ -60,7 +60,7 @@ $(document).ready(function(){
     });
 
     //hide sidebar when have only one item
-    if ($('#sideNav > ul > li').length <= 1) {
+    if ($('#sideNav > ul > li > ul').length <= 0) {
         $('#sideNav').hide();
     } else {
         $('#sideNav').show();
