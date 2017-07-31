@@ -5,7 +5,7 @@
     </li>
     {% else %}
     <li>
-        <a class="test" tabindex="-1" href="#">{{ nav_item.title }}</a>
+        <a href="#">{{ nav_item.title }}</a>
         <ul>
         {% for nav_item in nav_item.children %}
         {% include "nav-sub.html" %}
