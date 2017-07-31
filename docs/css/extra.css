@@ -138,11 +138,6 @@ header{
     overflow: hidden;
     transition: all 0.3s ease;
 }
-nav{
-    max-height:60px;
-    transition: max-height 0.3s;
-    overflow: hidden;
-}
 .menu-btn{
     background: #232d3b;
     text-align: center;
@@ -171,10 +166,6 @@ nav{
 }
 
 @media all and (min-width: 1200px){
-    nav{
-        max-height: 100%;
-        overflow: visible;
-    }
     .menu-btn{
         display: none;
     }
