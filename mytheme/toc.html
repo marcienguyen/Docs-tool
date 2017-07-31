@@ -9,18 +9,18 @@
             <ul id="collapse-level-1" class="collapse">
                 {% for toc_lv1 in toc_item.children %}
                 <li class="toc-level-1" class="collapse">
-                    <div data-toggle="collapse" data-target="#collapse-level-2">
+                    <div data-toggle="collapse" data-target="#collapse-level-2-{% loop.index %}">
                         <a href="{{ toc_lv1.url }}">{{ toc_lv1.title }}</a>
                     </div>
                     {% if toc_lv1.children %}
-                    <ul id="collapse-level-2" class="collapse">
+                    <ul id="collapse-level-2-{% loop.index %}" class="collapse">
                         {% for toc_lv2 in toc_lv1.children %}
                         <li class="toc-level-2">
-                            <div data-toggle="collapse" data-target="#collapse-level-3">
+                            <div data-toggle="collapse" data-target="#collapse-level-3-{% loop.index %}">
                                 <a href="{{ toc_lv2.url }}">{{ toc_lv2.title }}</a>
                             </div>
                             {% if toc_lv2.children %}
-                            <ul id="collapse-level-3" class="collapse">
+                            <ul id="collapse-level-3-{% loop.index %}" class="collapse">
                                 {% for toc_lv3 in toc_lv2.children %}
                                 <li class="toc-level-3">
                                     <a href="{{ toc_lv3.url }}">{{ toc_lv3.title }}</a>
