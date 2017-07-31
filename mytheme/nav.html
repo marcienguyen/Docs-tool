@@ -21,12 +21,12 @@
             </div>
 
             {% if nav|length>1 %}
-            <ul class="menu navbar-left">
+            <ul class="nav navbar-nav navbar-left">
                 {% for nav_item in nav %}
                 {% if nav_item.children %}
-                <li class="{% if nav_item.active %}active{% endif %}">
+                <li class="nav-item {% if nav_item.active %}active{% endif %}">
                     <a href="#">{{ nav_item.title }}</a>
-                    <ul>
+                    <ul class="menu">
                     {% for nav_item in nav_item.children %}
                     {% include "nav-sub.html" %}
                     {% endfor %}

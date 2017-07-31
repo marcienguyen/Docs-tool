@@ -46,9 +46,9 @@ $(document).ready(function(){
     $('.menu .more').click(function(){
         $(this).parent('li').toggleClass('open');
     });
-    //$('.menu-btn').click(function(){
-    //    $('nav').toggleClass('menu-open');
-    //});
+    $('.menu .sub-menu-btn').click(function(){
+        $('.menu > ul').toggleClass('menu-open');
+    });
 
     //protect table width
     $('.main-content div[role="main"] > table').wrap('<div class="protect-table"></div>');
