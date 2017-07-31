@@ -21,12 +21,12 @@
             </div>
 
             {% if nav|length>1 %}
-            <ul class="navbar-nav mr-auto navbar-left">
+            <ul class="menu navbar-left">
                 {% for nav_item in nav %}
                 {% if nav_item.children %}
-                <li class="nav-item dropdown {% if nav_item.active %}active{% endif %}">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ nav_item.title }}</a>
-                    <ul class="dropdown-menu">
+                <li class="{% if nav_item.active %}active{% endif %}">
+                    <a href="#">{{ nav_item.title }}</a>
+                    <ul>
                     {% for nav_item in nav_item.children %}
                     {% include "nav-sub.html" %}
                     {% endfor %}
@@ -42,9 +42,6 @@
                 {% endif %}
                 {% endfor %}
 
-                <!--<li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>-->
             </ul>
             {% endif %}
 

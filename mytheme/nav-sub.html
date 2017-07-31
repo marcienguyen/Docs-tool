@@ -1,12 +1,12 @@
 
     {% if not nav_item.children %}
-    <li {% if nav_item.active %}class="dropdown-item active"{% endif %}>
+    <li class="{% if nav_item.active %}active{% endif %}">
         <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
     </li>
     {% else %}
-    <li class="dropdown-submenu">
+    <li>
         <a class="test" tabindex="-1" href="#">{{ nav_item.title }}</a>
-        <ul class="dropdown-menu">
+        <ul>
         {% for nav_item in nav_item.children %}
         {% include "nav-sub.html" %}
         {% endfor %}

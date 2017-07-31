@@ -35,6 +35,21 @@ $(document).ready(function(){
         $(".search-backdrop").fadeOut();
     });
 
+    //menu
+    $(".menu li a").each(function() {
+        if ($(this).next().length > 0) {
+            $(this).addClass("parent");
+        };
+    })
+    var menux = $('.menu li a.parent');
+    $( '<div class="more"></div>' ).insertBefore(menux);
+    $('.menu .more').click(function(){
+        $(this).parent('li').toggleClass('open');
+    });
+    //$('.menu-btn').click(function(){
+    //    $('nav').toggleClass('menu-open');
+    //});
+
     //protect table width
     $('.main-content div[role="main"] > table').wrap('<div class="protect-table"></div>');
 
