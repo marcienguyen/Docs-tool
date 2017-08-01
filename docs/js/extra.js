@@ -137,7 +137,7 @@ function onScroll(event){
     $('ul.bs-sidenav li a:last-child').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top > scrollPos && refElement.position().top < (scrollPos + wimHeight) / 2) {
+        if (refElement.position().top > scrollPos && refElement.position().top < scrollPos + wimHeight / 2) {
             $('ul.bs-sidenav li a:last-child').removeClass("active");
             currLink.addClass("active");
             return false;
