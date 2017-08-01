@@ -92,7 +92,7 @@ $(document).ready(function(){
         }
     });
     //bootstrap collapse event
-    $('ul.collapse').on('show.bs.collapse', function(e){
+    $('ul.collapse').on('shown.bs.collapse', function(e){
         e.preventDefault();
     });
 
