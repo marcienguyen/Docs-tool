@@ -63,14 +63,6 @@ header{
 .navbar-nav a {
     text-decoration: none;
 }
-.navbar .navbar-left > .nav-item:hover > a, .navbar .navbar-left > .nav-item.active >a {
-    background: #fff;
-    background-color: #fff;
-    border-color: #d2d2d2;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-}
 .navbar .navbar-left > .nav-item > a {
     color: #333;
     position: relative;
@@ -82,6 +74,7 @@ header{
     display: block;
     text-decoration: none;
     border: 1px solid transparent;
+    border-top: 1px solid #e0e0e0;
     z-index: 10;
 }
 .navbar .navbar-left > .nav-item.dropdown:hover > a{
