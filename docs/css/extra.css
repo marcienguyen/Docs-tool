@@ -264,6 +264,7 @@ header{
 }
 #sideNav li a.active {
     font-weight: 600;
+    color: #585858;
 }
 #sideNav ul {
     padding-left: 15px;
