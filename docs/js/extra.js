@@ -94,19 +94,14 @@ $(document).ready(function(){
     //hide sideNav when collapse
     $('.collapse').on('shown.bs.collapse', function () {
         //$('#sideNav.bs-sidebar .sidenav-toggle').parent().removeClass('active');
+        calculateNavHeight();
+    })
+    $('.collapse').on('hidden.bs.collapse', function () {
+        //$('#sideNav.bs-sidebar .sidenav-toggle').parent().removeClass('active');
+        calculateNavHeight();
     })
 
-    //calculate height of sidebar to fit with window height
-    var sidenav = $('#sideNav .bs-sidenav');
-    if (sidenav.height() + sidenav.position().top > $(window).height()) {
-        var padding_bott = sidenav.height() + sidenav.position().top - $(window).height();
-        if (padding_bott > 200) {
-            padding_bott = 200;
-        } else if (padding_bott < 50) {
-            padding_bott = 50;
-        }
-        sidenav.css({'height': ($(window).height() - sidenav.position().top) + 'px', 'overflow-y': 'scroll', 'padding-bottom': padding_bott+'px'});
-    }
+    calculateNavHeight();
 
     //back to Top
     if ($('#back-to-top').length) {
@@ -150,4 +145,18 @@ function onScroll(event){
             //currLink.removeClass("active");
         }
     });
+}
+
+function calculateNavHeight() {
+    //calculate height of sidebar to fit with window height
+    var sidenav = $('#sideNav .bs-sidenav');
+    if (sidenav.height() + sidenav.position().top > $(window).height()) {
+        var padding_bott = sidenav.height() + sidenav.position().top - $(window).height();
+        if (padding_bott > 200) {
+            padding_bott = 200;
+        } else if (padding_bott < 50) {
+            padding_bott = 50;
+        }
+        sidenav.css({'height': ($(window).height() - sidenav.position().top) + 'px', 'overflow-y': 'scroll', 'padding-bottom': padding_bott+'px'});
+    }
 }
