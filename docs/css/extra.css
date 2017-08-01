@@ -127,8 +127,12 @@ header{
     background: #f7f7f7;
     padding-left: 0px;
 }
-.menu > ul {
+.menu ul {
     padding-left: 0px;
+    display: none;
+}
+.menu ul.open {
+    display: block;
 }
 .menu a{
     display: block;
@@ -170,7 +174,7 @@ header{
     height: 55px;
     transition: transform 0.3s;
 }
-.more{
+.menu .more{
     background: rgba(0, 0, 0, 0.38);
     float: right;
     min-width: 10%;
