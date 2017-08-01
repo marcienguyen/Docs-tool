@@ -24,9 +24,9 @@
             <ul class="navbar-nav navbar-left">
                 {% for nav_item in nav %}
                 {% if nav_item.children %}
-                <li class="nav-item {% if nav_item.active %}active{% endif %}">
+                <li class="nav-item menu {% if nav_item.active %}active{% endif %}">
                     <a href="#">{{ nav_item.title }}</a>
-                    <ul class="menu">
+                    <ul class="">
                     {% for nav_item in nav_item.children %}
                     {% include "nav-sub.html" %}
                     {% endfor %}
