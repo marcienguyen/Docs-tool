@@ -171,21 +171,20 @@ header{
     background: #fff;
 }
 .menu .open a {
-    background: #fff;
     background-color: #fff!important;
 }
-.menu .open > .more img{
-    transform: rotate(-90deg);
-}
-.more img{
-    height: 55px;
-    transition: transform 0.3s;
-}
 .menu .more{
-    background: rgba(0, 0, 0, 0.38);
+    width: 7px;
+    height: 14px;
+    /*transition: transform 0.3s;
+    background: rgba(0, 0, 0, 0.38);*/
+    background: url('../img/arrow_right.png');
     float: right;
     min-width: 10%;
     cursor: move;
+}
+.menu .open > .more{
+    transform: rotate(-90deg);
 }
 
 @media all and (min-width: 992px){
