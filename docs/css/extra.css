@@ -483,7 +483,7 @@ header{
         transform: translateX(282px);
         transition-duration: 0.5s;
     }
-    .bs-sidebar.nav-menu:before {
+    .bs-sidebar.nav-menu .sidenav-toggle:before {
         pointer-events: all;
         content: '>';
         font-size: 45px;
@@ -506,7 +506,7 @@ header{
         opacity: 0.5;
         cursor: pointer;
     }
-    .bs-sidebar.nav-menu.active:before {
+    .bs-sidebar.nav-menu.active .sidenav-toggle:before {
         left: 267px;
         content: '<';
         top: 10px;
