@@ -182,9 +182,10 @@ header{
     float: right;
     cursor: move;
 }
-.menu.open > a.more:before {
+.menu .open > a.more:before {
     transform: rotate(90deg);
 }
+
 @media all and (min-width: 992px){
     .navbar .nav-item:hover, .menu.open {
         background: #fff;
@@ -242,7 +243,9 @@ header{
 }
 /*end menu*/
 
+/*sideNav*/
 #sideNav {display: none;}
+#sideNav li {list-style:none;}
 #sideNav .bs-sidenav {
     background: #F1F1F1;
     padding: 10px 0 20px;
@@ -250,20 +253,34 @@ header{
     flex-direction: column;
     position: fixed;
     min-width: 267px;
-}
-#sideNav .bs-sidenav > li {
-    width: 100%;
-}
-#sideNav > ul > li > a{
-    padding: 6px 12px;
+    overflow-y: scroll;
+    max-height: 500px;
     font-size: 14px;
-    line-height: 1.3em;
-    font-weight: normal;
-    display: block;
 }
-#sideNav > ul > li > a:hover {
-    background-color: #b7d4ff;
+#sideNav li a {
+    line-height: 26px;
+    text-decoration: none;
+    color: #585858;
 }
+#sideNav ul {
+    padding-left: 15px;
+}
+#sideNav ul div:not(:last-child)[data-toggle="collapse"]:before{
+    content: '+';
+}
+#sideNav ul div:last-child[data-toggle="collapse"]:before{
+    content: '-';
+}
+#sideNav .toc-level-0 > div > a {
+    font-size: 16px;
+    font-weight:600;
+}
+#sideNav .toc-level-1 > div > a {
+    font-size: 14px;
+    font-weight:600;
+}
+
+/*end sideNav*/
 .container .col-md-9[role="main"] {
     background-color: #fff;
 }
