@@ -91,6 +91,10 @@ $(document).ready(function(){
             $(this).removeClass('active');
         }
     });
+    //hide sideNav when collapse
+    $('.collapse').on('shown.bs.collapse', function () {
+        $('#sideNav.bs-sidebar').removeClass('active');
+    })
 
     //calculate height of sidebar to fit with window height
     var sidenav = $('#sideNav .bs-sidenav');
