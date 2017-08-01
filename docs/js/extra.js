@@ -140,7 +140,7 @@ function onScroll(event){
         if (refElement.position().top > scrollPos && refElement.position().top < scrollPos + wimHeight) {
             $('ul.bs-sidenav li a:last-child').removeClass("active");
             currLink.addClass("active");
-            return;
+            return false;
         }
         else{
             //currLink.removeClass("active");
