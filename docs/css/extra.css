@@ -75,7 +75,7 @@ header{
     text-decoration: none;
     border: 1px solid transparent;
     border-top: 1px solid #e0e0e0;
-    z-index: 10;
+    z-index: 20;
 }
 .navbar .navbar-left > .nav-item.dropdown:hover > a{
     border-bottom: transparent;
@@ -134,19 +134,24 @@ header{
     text-decoration: none;
     padding: 10px 10px;
     color: #3c3c3c;
-    background-color: #f7f7f7!important;
+    background-color: #f7f7f7;
 }
+.menu > ul > li a{background-color: #fff;}
 .menu li{
     position: relative;
     list-style: none;
-    /*padding-left: 10px;*/
+    padding-left: 10px;
+    background-color: #fff;
+}
+.menu li > a {
     border-top: 1px solid #e4e4e4;
 }
 .menu li.open{background: #fff;}
+.menu .expand{max-height: 900px;}
 .menu ul{
     display: block;
-    max-height: 0;
     overflow: hidden;
+    max-height: 0;
     transition: all 0.3s ease;
 }
 .menu-btn{
@@ -184,9 +189,7 @@ header{
 }
 
 @media all and (min-width: 992px){
-    .navbar .navbar-left > .nav-item > a {border: none;}
-    .navbar .open li a {padding-left: 20px;}
-    .navbar .nav-item:hover {
+    .navbar .nav-item:hover, .menu.open {
         background: #fff;
         position: relative;
     }
@@ -196,7 +199,7 @@ header{
         font-size: 15px;
         color: #333;
     }
-    .navbar .nav-item:hover > a {
+    .navbar .nav-item:hover > a, .menu.open > a {
         width: 100%;
         background: #fff;
         background-color: #fff!important;
@@ -204,10 +207,10 @@ header{
         border-bottom: none!important;
         z-index: 12;
     }
-    .navbar .nav-item:hover > a:last-child {
+    .navbar .nav-item:hover > a:last-child, .menu.open > a:last-child {
         border-bottom: 1px solid #cecece!important;
     }
-    .navbar .nav-item:hover > ul {
+    .navbar .nav-item:hover > ul, .menu.open > ul {
         max-height: 900px;
         position: absolute;
         background: #fff;
@@ -215,20 +218,21 @@ header{
         text-align: left;
         border: 1px solid #cecece;
         top: 41px;
-        z-index: 11;
+        z-index: 10;
     }
-    .navbar .nav-item:hover > ul > li {
+    .navbar .nav-item:hover > ul > li, .menu.open > ul > li {
         background: #fff;
         border-top: none;
         padding: 0px;
     }
-    .navbar .nav-item:hover > ul > li a {
+    .navbar .nav-item:hover > ul > li a, .menu.open > ul > li a {
         background: #fff;
         background-color: #fff!important;
         padding-top: 5px;
         padding-bottom: 5px;
     }
-    .navbar .nav-item:hover > ul > li a:hover {
+    .menu li:hover {background-color: #DFF6FF!important;}
+    .navbar .nav-item:hover > ul > li a:hover, .menu.open > ul > li a:hover {
         background: #DFF6FF;
         background-color: #DFF6FF!important;
     }
