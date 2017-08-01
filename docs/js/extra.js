@@ -84,7 +84,7 @@ $(document).ready(function(){
     }
 
     //show hide sidebar
-    $('#sideNav.bs-sidebar').click(function(){
+    $('#sideNav.bs-sidebar .sidenav-toggle').click(function(){
         if(!$(this).hasClass('active')) {
             $(this).addClass('active');
         } else {
@@ -93,7 +93,7 @@ $(document).ready(function(){
     });
     //hide sideNav when collapse
     $('.collapse').on('shown.bs.collapse', function () {
-        $('#sideNav.bs-sidebar').removeClass('active');
+        $('#sideNav.bs-sidebar .sidenav-toggle').removeClass('active');
     })
 
     //calculate height of sidebar to fit with window height
