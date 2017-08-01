@@ -173,18 +173,17 @@ header{
 .menu .open a {
     background-color: #fff!important;
 }
-.menu .more{
+.menu > a.more:before {
+    content: '';
     width: 7px;
     height: 14px;
-    /*transition: transform 0.3s;
-    background: rgba(0, 0, 0, 0.38);*/
-    background: url('../img/arrow_right.png');
+    background: url(../img/arrow_right.png);
+    background-repeat: no-repeat;
     float: right;
-    min-width: 10%;
     cursor: move;
 }
-.menu .open > .more{
-    transform: rotate(-90deg);
+.menu .open > a.more:before {
+    transform: rotate(90deg);
 }
 
 @media all and (min-width: 992px){
