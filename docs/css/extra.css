@@ -134,12 +134,14 @@ header{
 .menu ul.open {
     display: block;
     max-height: 2000px;
+    background: #fff;
 }
 .menu a{
     display: block;
     text-decoration: none;
     padding: 10px 10px;
     color: #3c3c3c;
+    background-color: #f7f7f7!important;
 }
 .menu li{
     position: relative;
@@ -166,6 +168,13 @@ header{
 .menu-open,
 .menu .open > ul{
     max-height: 2000px;
+}
+.menu .open li {
+    background: #fff;
+}
+.menu .open a {
+    background: #fff;
+    background-color: #fff!important;
 }
 .menu .open > .more img{
     transform: rotate(-90deg);
