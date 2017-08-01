@@ -35,7 +35,7 @@ $(document).ready(function(){
         $(".search-backdrop").fadeOut();
     });
 
-    //menu
+    /*menu*/
     $(".menu a").each(function() {
         if ($(this).next().length > 0) {
             $(this).addClass("parent");
@@ -44,14 +44,15 @@ $(document).ready(function(){
     var menux = $('.menu a.parent');
     $( '<span class="more"></span>' ).insertBefore(menux);
     $('.menu .more').click(function(){
-        $(this).next('ul').toggleClass('open');
+        $(this).parent('.menu').toggleClass('open');
     });
     $('.menu .parent').click(function(){
-        $(this).next('ul').toggleClass('open');
+        $(this).parent('.menu').toggleClass('open');
     });
     $('.menu .sub-menu-btn').click(function(){
         $('.menu > ul').toggleClass('menu-open');
     });
+    /*end menu*/
 
     //protect table width
     $('.main-content div[role="main"] > table').wrap('<div class="protect-table"></div>');
