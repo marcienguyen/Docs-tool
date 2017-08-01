@@ -63,7 +63,7 @@ $(document).ready(function(){
         e.preventDefault();
         $(document).off("scroll");
 
-        $('.bs-sidenav li a:last-child').removeClass('active');
+        $('.bs-sidenav div[data-toggle="collapse"] a[href^="#"]').removeClass('active');
         $(this).addClass('active');
 
         var target = this.hash;
