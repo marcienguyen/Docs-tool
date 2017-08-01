@@ -91,11 +91,6 @@ $(document).ready(function(){
             $(this).removeClass('active');
         }
     });
-    //prevent hide sideNav
-    $('#sideNav .bs-sidenav').on('click', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-    });
 
     //calculate height of sidebar to fit with window height
     var sidenav = $('#sideNav .bs-sidenav');
