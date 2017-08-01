@@ -85,15 +85,15 @@ $(document).ready(function(){
 
     //show hide sidebar
     $('#sideNav.bs-sidebar .sidenav-toggle').click(function(){
-        if(!$(this).parent().next('.bs-sidenav').hasClass('active')) {
-            $(this).parent().next('.bs-sidenav').addClass('active');
+        if(!$(this).next('.bs-sidenav').hasClass('active')) {
+            $(this).next('.bs-sidenav').addClass('active');
         } else {
-            $(this).parent().next('.bs-sidenav').removeClass('active');
+            $(this).next('.bs-sidenav').removeClass('active');
         }
     });
     //hide sideNav when collapse
     $('.collapse').on('shown.bs.collapse', function () {
-        $('#sideNav.bs-sidebar .sidenav-toggle').removeClass('active');
+        $('#sideNav.bs-sidebar .sidenav-toggle').next('.bs-sidenav').removeClass('active');
     })
 
     //calculate height of sidebar to fit with window height
