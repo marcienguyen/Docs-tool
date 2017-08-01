@@ -91,8 +91,8 @@ $(document).ready(function(){
             $(this).removeClass('active');
         }
     });
-    //bootstrap collapse event
-    $('ul.collapse').on('shown.bs.collapse', function(e){
+    //prevent hide sideNav
+    $('#sideNav .bs-sidenav').on('click', function(e){
         e.preventDefault();
     });
 
