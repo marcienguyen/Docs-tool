@@ -63,8 +63,8 @@ $(document).ready(function(){
         e.preventDefault();
         $(document).off("scroll");
 
-        $('.bs-sidenav li').removeClass('active');
-        $(this).parent().addClass('active');
+        $('.bs-sidenav li a:last-child').removeClass('active');
+        $(this).addClass('active');
 
         var target = this.hash;
         $target = $(target);
@@ -93,7 +93,7 @@ $(document).ready(function(){
     });
     //hide sideNav when collapse
     $('.collapse').on('shown.bs.collapse', function () {
-        $('#sideNav.bs-sidebar .sidenav-toggle').parent().removeClass('active');
+        //$('#sideNav.bs-sidebar .sidenav-toggle').parent().removeClass('active');
     })
 
     //calculate height of sidebar to fit with window height
@@ -139,15 +139,15 @@ $(document).ready(function(){
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
     var wimHeight = $(window).height();
-    $('ul.bs-sidenav li > a').each(function () {
+    $('ul.bs-sidenav li a:last-child').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top < scrollPos + wimHeight) {
-            $('ul.bs-sidenav li').removeClass("active");
-            currLink.parent().addClass("active");
+            $('ul.bs-sidenav li a:last-child').removeClass("active");
+            currLink.addClass("active");
         }
         else{
-            //currLink.parent().removeClass("active");
+            //currLink.removeClass("active");
         }
     });
 }

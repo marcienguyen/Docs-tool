@@ -253,9 +253,9 @@ header{
     flex-direction: column;
     position: fixed;
     min-width: 267px;
-    overflow-y: scroll;
-    max-height: 500px;
     font-size: 14px;
+    /*overflow-y: scroll;
+    max-height: 500px;*/
 }
 #sideNav li a {
     line-height: 26px;
