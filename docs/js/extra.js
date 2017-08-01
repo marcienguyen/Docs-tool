@@ -40,7 +40,7 @@ $(document).ready(function(){
         if ($(this).next().length > 0) {
             $(this).addClass("parent");
         };
-    })
+    });
     var menux = $('.menu li a.parent');
     $( '<span class="more"></span>' ).insertBefore(menux);
     $('.menu .more').click(function(){
