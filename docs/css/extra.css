@@ -224,6 +224,8 @@ header{
     .navbar .nav-item:hover > ul > li a {
         background: #fff;
         background-color: #fff!important;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     .navbar .nav-item:hover > ul > li a:hover {
         background: #DFF6FF;
