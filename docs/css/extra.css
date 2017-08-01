@@ -133,6 +133,7 @@ header{
 }
 .menu ul.open {
     display: block;
+    max-height: 2000px;
 }
 .menu a{
     display: block;
@@ -147,12 +148,11 @@ header{
     border-top: 1px solid #e4e4e4;
 }
 .menu li.open{background: #fff;}
-.menu li ul{
+.menu ul{
     display: block;
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
-    padding-left: 10px;
 }
 .menu-btn{
     background: #232d3b;
