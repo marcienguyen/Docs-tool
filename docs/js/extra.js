@@ -85,10 +85,10 @@ $(document).ready(function(){
 
     //show hide sidebar
     $('#sideNav.bs-sidebar .sidenav-toggle').click(function(){
-        if(!$(this).hasClass('active')) {
-            $(this).addClass('active');
+        if(!$(this).parent().next('.bs-sidenav').hasClass('active')) {
+            $(this).parent().next('.bs-sidenav').addClass('active');
         } else {
-            $(this).removeClass('active');
+            $(this).parent().next('.bs-sidenav').removeClass('active');
         }
     });
     //hide sideNav when collapse
