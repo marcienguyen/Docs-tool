@@ -182,10 +182,9 @@ header{
     float: right;
     cursor: move;
 }
-.menu .open > a.more:before {
+.menu.open > a.more:before {
     transform: rotate(90deg);
 }
-
 @media all and (min-width: 992px){
     .navbar .nav-item:hover, .menu.open {
         background: #fff;
