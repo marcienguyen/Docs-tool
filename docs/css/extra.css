@@ -173,18 +173,7 @@ header{
 .menu .open a {
     background-color: #fff!important;
 }
-.menu > a.more:before {
-    content: '';
-    width: 7px;
-    height: 14px;
-    background: url(../img/arrow_right.png);
-    background-repeat: no-repeat;
-    float: right;
-    cursor: move;
-}
-.menu .open > a.more:before {
-    transform: rotate(90deg);
-}
+
 
 @media all and (min-width: 992px){
     .navbar .nav-item:hover, .menu.open {
@@ -463,7 +452,7 @@ header{
     }
 }
 /*Disable hover active menu*/
-@media (max-width: 992px) {
+@media all and (max-width: 992px) {
     .navbar .navbar-left > .nav-item:hover > .dropdown-menu {
         display: none;
     }
@@ -472,6 +461,18 @@ header{
     }
     .dropdown-submenu:hover>.dropdown-menu {
         display: none;
+    }
+    .menu > a.more:before {
+        content: '';
+        width: 7px;
+        height: 14px;
+        background: url(../img/arrow_right.png);
+        background-repeat: no-repeat;
+        float: right;
+        cursor: move;
+    }
+    .menu.open > a.more:before {
+        transform: rotate(90deg);
     }
 
     /*Sidebar toggle*/
