@@ -262,6 +262,9 @@ header{
     text-decoration: none;
     color: #585858;
 }
+#sideNav li a.active {
+    font-weight: 600;
+}
 #sideNav ul {
     padding-left: 15px;
 }
