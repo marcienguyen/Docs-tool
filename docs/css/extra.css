@@ -225,6 +225,10 @@ header{
         background: #fff;
         background-color: #fff!important;
     }
+    .navbar .nav-item:hover > ul > li a:hover {
+        background: #DFF6FF;
+        background-color: #DFF6FF!important;
+    }
     .navbar .nav-item > ul {
         transition: none;
     }
