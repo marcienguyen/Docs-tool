@@ -36,12 +36,12 @@ $(document).ready(function(){
     });
 
     //menu
-    $(".menu li a").each(function() {
+    $(".menu a").each(function() {
         if ($(this).next().length > 0) {
             $(this).addClass("parent");
         };
     });
-    var menux = $('.menu li a.parent');
+    var menux = $('.menu a.parent');
     $( '<span class="more"></span>' ).insertBefore(menux);
     $('.menu .more').click(function(){
         $(this).parent('li').toggleClass('open');

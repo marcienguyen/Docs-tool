@@ -66,7 +66,10 @@ header{
 .navbar .navbar-left > .nav-item:hover > a, .navbar .navbar-left > .nav-item.active >a {
     background: #fff;
     background-color: #fff;
-    border-color: #ccc;
+    border-color: #d2d2d2;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
 }
 .navbar .navbar-left > .nav-item > a {
     color: #333;
@@ -74,7 +77,7 @@ header{
     font-size: 14px;
     background-clip: padding-box;
     font-weight: 600;
-    padding: 12px 12px;
+    padding: 10px 10px;
     outline: 0;
     display: block;
     text-decoration: none;
@@ -117,27 +120,35 @@ header{
     display: block;
     padding: 5px 10px;
 }
+.navbar-toggler-right{top: 0.7rem;}
 
 /*Menu*/
 .menu{
-    background: rgba(44, 62, 80, 0.99);
+    background: #f7f7f7;
+    padding-left: 0px;
+}
+.menu > ul {
+    padding-left: 0px;
 }
 .menu a{
     display: block;
     text-decoration: none;
-    padding: 20px 30px;
-    color: #fff;
-    border: 1px solid #1d2531;
+    padding: 10px 10px;
+    color: #3c3c3c;
 }
 .menu li{
     position: relative;
+    list-style: none;
+    padding-left: 10px;
+    border-top: 1px solid #e4e4e4;
 }
+.menu li.open{background: #fff;}
 .menu li ul{
     display: block;
-    background: rgba(255, 0, 0, 0.12);
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    padding-left: 10px;
 }
 .menu-btn{
     background: #232d3b;
