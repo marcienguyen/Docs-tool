@@ -183,44 +183,53 @@ header{
     cursor: move;
 }
 
-@media all and (min-width: 1200px){
+@media all and (min-width: 992px){
+    .navbar .navbar-left > .nav-item > a {border: none;}
+    .navbar .nav-item:hover {
+        background: #fff;
+        position: relative;
+    }
+    .navbar .nav-item a {
+        box-sizing:border-box;
+        border: 1px solid transparent!important;
+        font-size: 15px;
+        color: #333;
+    }
+    .navbar .nav-item:hover > a {
+        width: 100%;
+        background: #fff;
+        background-color: #fff!important;
+        border: 1px solid #cecece!important;
+        border-bottom: none!important;
+        z-index: 12;
+    }
+    .navbar .nav-item:hover > a:last-child {
+        border-bottom: 1px solid #cecece!important;
+    }
+    .navbar .nav-item:hover > ul {
+        max-height: 900px;
+        position: absolute;
+        background: #fff;
+        min-width: 200px;
+        text-align: left;
+        border: 1px solid #cecece;
+        top: 41px;
+        z-index: 11;
+    }
+    .navbar .nav-item:hover > ul > li {
+        background: #fff;
+        border-top: none;
+        padding: 0px;
+    }
+    .navbar .nav-item:hover > ul > li a {
+        background: #fff;
+        background-color: #fff!important;
+    }
+    .navbar .nav-item > ul {
+        transition: none;
+    }
     .menu-btn{
         display: none;
-    }
-    .menu{
-        text-align: center;
-    }
-    .menu a{
-        width:9em;
-        background: #232d3b;
-    }
-    .menu a:hover{
-        background-color: #1ABC9C;
-    }
-    .menu > li{
-        display: inline-block;
-        margin: 0 2px;
-    }
-    .menu li ul{
-        left: -9999px;
-        position:absolute;
-        overflow: visible;
-        -webkit-transition: all 0.1s ease;
-    }
-    .menu > li > ul ul{
-        top: 0;
-    }
-    .menu li:hover > ul{
-        left:100%;
-    }
-    .menu > li:hover > ul{
-        left: 0;
-    }
-    .menu .open > ul{
-        left:100%;
-    }
-    .menu > li.open > ul{
-        left: 0;
     }
 }
 /*end menu*/
