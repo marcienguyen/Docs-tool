@@ -3,7 +3,7 @@
     <ul class="nav bs-sidenav">
         {% for toc_item in page.toc %}
         <li class="toc-level-0">
-            <div data-toggle="collapse" data-target="#collapse-level-1-{{ loop.index }}">
+            <div class="show" data-toggle="collapse" data-target="#collapse-level-1-{{ loop.index }}">
                 <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
             </div>
             {% if toc_item.children %}
