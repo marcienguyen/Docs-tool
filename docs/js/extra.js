@@ -52,7 +52,7 @@ $(document).ready(function(){
     });
     //close menu when click outside
     $('*').on('click', function(e){
-        if(!$(this).hasClass('.more')){
+        if(!$(this).hasClass('more')){
             $('.menu').removeClass('open').find('ul.expand').removeClass('expand');
             //e.stopPropagation();
             //e.preventDefault();
