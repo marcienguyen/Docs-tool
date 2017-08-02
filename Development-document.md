@@ -1,10 +1,14 @@
 **1. Yêu cầu:**
+
 - Cài đặt Docker
+
 **2. Hướng dẫn**
+
 - Chỉnh sửa css: mở file docs/css/extra.css và chỉnh sửa. Sau khi biên dịch mkdocs build thì file css sẽ được add vào trong theme.
 - Chỉnh sửa js: tương tự mở file docs/js/extra.js.
 - Thư mục mytheme: là thư mục theme với file main.html là file chính, từ file này sẽ include các file thành phần khác như header, footer, nav, toc.
 Theme sử dụng engine http://jinja.pocoo.org/docs/2.9/, tham khảo để biết thêm chi tiết.
+
 **3. Phương thức hoạt động**
 
 Khi chỉnh sửa theme xong chỉ cần chạy lệnh sau để tự động clone code mới từ github vào trong container.
