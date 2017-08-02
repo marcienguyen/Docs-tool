@@ -56,6 +56,8 @@ $(document).ready(function(){
             $('.menu').removeClass('open').find('ul.expand').removeClass('expand');
             //e.stopPropagation();
             //e.preventDefault();
+        } else {
+            e.stopPropagation();
         };
     });
     /*end menu*/
