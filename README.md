@@ -1,6 +1,6 @@
 # Use Guide
 
-## How to use it:
+## How to run it:
 
 ```
   # docker build --rm -t docs_tool . \
