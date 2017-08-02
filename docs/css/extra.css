@@ -75,7 +75,7 @@ header{
     text-decoration: none;
     border: 1px solid transparent;
     border-top: 1px solid #e0e0e0;
-    z-index: 20;
+    z-index: 21;
 }
 .navbar .navbar-left > .nav-item.dropdown:hover > a{
     border-bottom: transparent;
@@ -179,6 +179,7 @@ header{
     .navbar .nav-item:hover, .menu.open {
         background: #fff;
         position: relative;
+        z-index: 999;
     }
     .navbar .nav-item a {
         box-sizing:border-box;
@@ -192,7 +193,7 @@ header{
         background-color: #fff!important;
         border: 1px solid #cecece!important;
         border-bottom: none!important;
-        z-index: 12;
+        z-index: 30;
     }
     .navbar .nav-item:hover > a:last-child, .menu.open > a:last-child {
         border-bottom: 1px solid #cecece!important;
@@ -204,12 +205,12 @@ header{
         min-width: 200px;
         text-align: left;
         border: 1px solid #cecece;
-        top: 41px;
-        z-index: 10;
+        top: 40px;
+        z-index: 20;
     }
     .navbar .nav-item:hover > ul > li, .menu.open > ul > li {
         background: #fff;
-        border-top: none;
+        /* border-top: none; */
         padding: 0px;
     }
     .navbar .nav-item:hover > ul > li a, .menu.open > ul > li a {
