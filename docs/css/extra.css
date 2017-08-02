@@ -481,12 +481,12 @@ header{
         /*pointer-events: none;*/
         position: fixed;
         z-index: 9;
-        left: -282px;
+        left: -303px;
         max-width: 268px;
         transition-duration: 0.5s;
     }
     .bs-sidebar.nav-menu.active {
-        transform: translateX(282px);
+        transform: translateX(303px);
         transition-duration: 0.5s;
     }
     .bs-sidebar.nav-menu .sidenav-toggle:before {
