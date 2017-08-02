@@ -238,7 +238,7 @@ header{
 #sideNav li {list-style:none;}
 #sideNav .bs-sidenav {
     background: #F1F1F1;
-    padding: 10px 0 20px;
+    padding: 10px;
     border-radius: 0px;
     flex-direction: column;
     position: fixed;
