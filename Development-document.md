@@ -40,4 +40,4 @@ Tại nơi cấu hình domain docs.magestore.com trỏ vào ip 130.211.157.247, 
         ProxyPassReverse "/" https://magestore.github.io/Docs/
         ProxyPassReverse "/" http://magestore.github.io/Docs/
 ```
-**Lưu ý:** nếu làm theo hướng dẫn custom domain của github page thì sẽ không có được certificate cho https
+> _**Lưu ý:** nếu làm theo hướng dẫn custom domain của github page thì sẽ không có được certificate cho https_
