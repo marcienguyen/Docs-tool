@@ -51,9 +51,12 @@ $(document).ready(function(){
         $('.menu > ul').toggleClass('menu-open');
     });
     //close menu when click outside
-    $('*').on('click', function(e){if($(this).parent('.menu').length <= 0 && $(this) != $('.menu')){
-        $('.menu').removeClass('open').find('ul.expand').removeClass('expand')};
-        e.stopPropagation()
+    $('*').on('click', function(e){
+        if($(this).parent('.menu').length <= 0 && $(this) != $('.menu')){
+            $('.menu').removeClass('open').find('ul.expand').removeClass('expand');
+            e.stopPropagation();
+            e.preventDefault();
+        };
     });
     /*end menu*/
 
