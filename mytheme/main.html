@@ -96,20 +96,7 @@
         <div class="container-fluid">
             <div class="col-md-12 text-center">
                 <div class="footer-wrap">
-                    {% if page %}
-                    {% if config.extra.repo_branch %}
-                    <p><a href="{{ config.repo_url }}{{ repo_doc_path }}/tree/{{ config.extra.repo_branch }}/docs/{{ page.input_path }}" class="icon icon-github"> Edit this page on GitHub</a></p>
-                    {% else %}
-                    <p><a href="{{ config.repo_url }}{{ repo_doc_path }}/tree/master/docs/{{ page.input_path }}" class="icon icon-github"> Edit this page on GitHub</a></p>
-                    {% endif %}
-                    {% endif %}
-                    <p>{% if config.copyright %}
-                        <small>{{ config.copyright }}<br></small>
-                        {% endif %}
-                        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
-                    </p>
-                    <hr>
-                    <div class="copyright-date">© 2017 Magento. All rights reserved.</div>
+                    <div class="copyright-date">© 2017 {% if config.copyright %}{{ config.copyright }}{% endif %}. All rights reserved. Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</div>
                 </div>
             </div>
         </div>
