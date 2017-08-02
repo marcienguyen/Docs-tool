@@ -52,11 +52,11 @@ $(document).ready(function(){
     });
     //close menu when click outside
     $('*').on('click', function(e){
-        if($(this).parent('.menu').length <= 0 && $(this) != $('.menu')){
+        if(!$(this).hasClass('.more')){
             $('.menu').removeClass('open').find('ul.expand').removeClass('expand');
             //e.stopPropagation();
             //e.preventDefault();
-        } else if($(this) == $('.menu')) {
+        } else {
             e.stopPropagation();
         };
     });

@@ -259,10 +259,10 @@ header{
 #sideNav ul {
     padding-left: 15px;
 }
-#sideNav ul div.collapsed:not(:last-child)[data-toggle="collapse"]:before{
+#sideNav ul div:not(:last-child)[data-toggle="collapse"]:before{
     content: '+';
 }
-#sideNav ul div:not(:last-child)[data-toggle="collapse"]:before{
+#sideNav ul div:not(:last-child)[data-toggle="collapse"][aria-expanded="true"]:before{
     content: '-';
 }
 #sideNav ul div:last-child[data-toggle="collapse"]:before{
