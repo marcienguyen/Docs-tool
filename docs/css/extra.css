@@ -117,7 +117,7 @@ header{
 
 /*Menu*/
 .menu{
-    background: #f7f7f7;
+    background:none transparent;
     padding-left: 0px;
 }
 .menu ul {
@@ -133,8 +133,8 @@ header{
     display: block;
     text-decoration: none;
     padding: 10px 10px;
-    color: #3c3c3c;
-    background-color: #f7f7f7;
+    color: #fff;font-size:16px;
+    background-color:transparent;
 }
 .menu > ul > li a{background-color: #fff;}
 .menu li{
