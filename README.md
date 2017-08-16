@@ -32,3 +32,6 @@
 ```
   # docker run -it --rm -d --name docs_tool -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" docs_tool
 ```
+
+## Theme User Guide
+- Read document https://realpython.com/blog/python/primer-on-jinja-templating/
