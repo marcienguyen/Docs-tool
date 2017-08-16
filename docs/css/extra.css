@@ -173,7 +173,7 @@ header{
 .menu .open a {
     background-color: #fff!important;
 }
-
+.wrap-nav{display:flex;justify-content:space-between}
 
 @media all and (min-width: 992px){
     .navbar .nav-item:hover, .menu.open {
