@@ -64,9 +64,9 @@
 </head>
 
 <body{% if page and page.is_homepage %} class="homepage" {% endif %}>
-
-    {% include "nav.html" %}
-
+    {% if not page.is_homepage %}
+        {% include "nav.html" %}
+    {% endif %}
     <div class="container-fluid main-content">
         <div class="row">
             {% block content %}
