@@ -35,3 +35,4 @@
 
 ## Theme User Guide
 - Read document https://realpython.com/blog/python/primer-on-jinja-templating/
+- http://jinja.pocoo.org/docs/2.9/templates/#list-of-control-structures
