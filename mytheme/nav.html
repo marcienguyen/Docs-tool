@@ -1,5 +1,8 @@
 <header class="site-header">
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
         {% if nav|length>1 or (page.next_page or page.previous_page) or config.repo_url %}
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,7 +95,9 @@
 
 
             </ul>
-
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 </header>
