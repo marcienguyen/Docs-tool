@@ -64,12 +64,13 @@
 </head>
 
 <body{% if page and page.is_homepage %} class="homepage" {% endif %}>
-    {% if not page.is_homepage %}
+    
         {% include "nav.html" %}
-    {% endif %}
+    
     <div class="container-fluid main-content">
         <div class="row">
             {% block content %}
+            {% if not page.is_homepage %}
             <div class="col col-md-3">
                 {% if page.meta.tags %}
                 <div class="tags hidden-print" id="tags">
@@ -88,6 +89,16 @@
                 {% endif %}
                 {% endif %}
             </div>
+            {% else %}
+             <div class="col col-md-12" role="main">
+                {% include "content.html" %}
+                {% if config.extra.disqus %}
+                {% if page.meta.comments %}
+                {% include "disqus.html" %}
+                {% endif %}
+                {% endif %}
+            </div>
+            {% endif %}
             {% endblock %}
         </div>
     </div>
