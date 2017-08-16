@@ -437,7 +437,9 @@ header{
 #back-to-top.show {
     opacity: 1;
 }
-
+.bg-faded {
+    background-color: #e9911c;
+}
 /*Footer CSS*/
 #footer{
     background-color: #31302B;
