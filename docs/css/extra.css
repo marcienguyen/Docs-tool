@@ -64,7 +64,7 @@ header{
     text-decoration: none;
 }
 .navbar .navbar-left > .nav-item > a {
-    color: #333;
+    color: #fff;
     position: relative;
     font-size: 14px;
     background-clip: padding-box;
@@ -76,6 +76,9 @@ header{
     border: 1px solid transparent;
     border-top: 1px solid #e0e0e0;
     z-index: 21;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .open>.nav-link {
+    color: #fff;
 }
 .navbar .navbar-left > .nav-item.dropdown:hover > a{
     border-bottom: transparent;
