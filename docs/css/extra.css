@@ -545,3 +545,6 @@ header{
         height: 55px;
     }
 }
+.homepage-content .wrap-homepage .slide-01{
+    background: url(../img/bg-slide1.png) no-repeat center bottom #e9911c;
+}
