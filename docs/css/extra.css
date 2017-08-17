@@ -583,3 +583,5 @@ header{
 .homepage-content .wrap-homepage .slide-02 .ux-improvement:before{background-position:-274px 0}
 .homepage-content .wrap-homepage .slide-02  ul{margin:0;padding:0;text-align:left}
 .homepage-content .wrap-homepage .slide-02  ul li{list-style:none;}
+.homepage-content .wrap-homepage .slide-02  button{}
+.tab-content>.active{opacity:1}
