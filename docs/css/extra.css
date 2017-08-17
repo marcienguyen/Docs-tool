@@ -549,7 +549,7 @@ header{
     text-align:center;padding:70px 0 328px;
     background: url(../img/bg-slide1.png) no-repeat center bottom #e9911c;
 }
-.form-search-home .input-box{display:flex;width:100%}
+.form-search-home .input-box{display:flex;width: 80%;margin: 0 auto;}
 .form-search-home .input-box input[type='text']{
     background: #fff;
     border: 0 none;
