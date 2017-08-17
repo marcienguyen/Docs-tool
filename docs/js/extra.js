@@ -156,12 +156,15 @@ function onScroll(event){
             //currLink.removeClass("active");
         }
     });
-    $('.version-magento .dropdown-menu a').click(function(){
-        $('.version-magento .dropdown-menu a').removeClass('active');
-        $(this).addClass('active');
-    });
+    
 }
-
+$('.version-magento .dropdown-menu a').click(function(){
+        $('.version-magento .dropdown-menu a').removeClass('active');
+        var href_id = $(this).attr('href');
+        $(this).addClass('active');
+        $('.slide-02 .tab-pane').removeClass('show');
+        $('#' + href_id).addClass('show');
+    });
 function calculateNavHeight() {
     //calculate height of sidebar to fit with window height
     var sidenav = $('#sideNav .bs-sidenav');
