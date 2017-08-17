@@ -187,7 +187,7 @@ header{
 
 @media all and (min-width: 992px){
     .navbar .nav-item:hover, .menu.open {
-        background: #fff;
+        background:transparent;
         position: relative;
         z-index: 999;
     }
@@ -199,9 +199,8 @@ header{
     }
     .navbar .nav-item:hover > a, .menu.open > a {
         width: 100%;
-        background: #fff;
-        background-color: #fff!important;
-        border: 1px solid #cecece!important;
+        background: transparent!important;
+        border-bottom: 2px solid #fff!important;
         border-bottom: none!important;
         z-index: 30;
     }
