@@ -576,9 +576,9 @@ header{
 }
 .homepage-content .wrap-homepage .slide-02{clear:both;padding:55px 0 80px}
 .homepage-content .wrap-homepage .slide-02 .title-box-sm{color:#4b4b4b;font-size:16px;font-weight:600}
-.homepage-content .wrap-homepage .slide-02 .title-box-sm:before{margin-bottom:35px;content:' ';display:block;text-align:center;background:url('../img/img-common.png') no-repeat;width:83px;height:93px;}
+.homepage-content .wrap-homepage .slide-02 .title-box-sm:before{margin:0 auto 35px;content:' ';display:block;text-align:center;background:url('../img/img-common.png') no-repeat;width:83px;height:93px;}
 .homepage-content .wrap-homepage .slide-02 .omnichannel:before{background-position:0 0}
-.homepage-content .wrap-homepage .slide-02 .sale-marketing:before{background-position:-101px 0}
+.homepage-content .wrap-homepage .slide-02 .sale-marketing:before{background-position:-101px 0;    width: 48px;}
 .homepage-content .wrap-homepage .slide-02 .ui-optimization:before{background-position:-170px 0}
 .homepage-content .wrap-homepage .slide-02 .ux-improvement:before{background-position:0 0}
 
