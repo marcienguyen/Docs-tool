@@ -549,3 +549,5 @@ header{
     text-align:center;padding:70px 0 328px;
     background: url(../img/bg-slide1.png) no-repeat center bottom #e9911c;
 }
+.form-search-home .input-box{display:flex}
+.form-search-home .input-box .btn-search{background:#905302;color:#fff;font-weight:bold;font-size:16px;width:166px;height:50px;text-align:center}
