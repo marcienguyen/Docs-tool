@@ -546,5 +546,6 @@ header{
     }
 }
 .homepage-content .wrap-homepage .slide-01{
+    text-align:center;padding:70px 0 328px;
     background: url(../img/bg-slide1.png) no-repeat center bottom #e9911c;
 }
