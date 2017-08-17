@@ -79,7 +79,7 @@ header{
 }
 .navbar .navbar-left > .nav-item > a:after {
     content: '';
-    background:'../img/arrow-down.png';
+    background:url('../img/arrow-down.png') no-repeat center;
     display: inline-block;
     vertical-align: middle;
     width: 10px;
