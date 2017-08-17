@@ -117,7 +117,7 @@ header{
     padding: 5px 10px;
 }
 .navbar-toggler-right{top: 0.7rem;}
-
+.wap-container{width:100%}
 /*Menu*/
 .menu{
     background:none transparent;
