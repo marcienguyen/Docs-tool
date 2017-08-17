@@ -550,7 +550,7 @@ header{
     text-align:center;padding:70px 0 328px;
     background: url(../img/bg-slide1.png), url(../img/bg-slide1-4.png) ;
     background-repeat:no-repeat, repeat;
-    background-postion:center bottom, center;
+    background-position:center bottom, center;
 }
 .homepage-content .wrap-homepage .slide-01 .title-page{color:#fff;font-size: 42px;font-weight: bold;margin-bottom:30px}
 .homepage-content .wrap-homepage .slide-01 .desc-title{font-size:16px;margin-bottom:30px}
