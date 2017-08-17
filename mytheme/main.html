@@ -68,7 +68,8 @@
         {% include "nav.html" %}
     
     <div class="container-fluid main-content">
-        <div class="row">
+        <div class="container">
+             <div class="row">
             {% block content %}
             {% if not page.is_homepage %}
             <div class="col col-md-3">
@@ -101,6 +102,7 @@
             {% endif %}
             {% endblock %}
         </div>
+            </div>
     </div>
 
     <footer id="footer">
