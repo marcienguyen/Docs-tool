@@ -163,7 +163,7 @@ $('.version-magento .dropdown-menu a').click(function(){
         var href_id = $(this).attr('href');
         $(this).addClass('active');
         $('.slide-02 .tab-pane').removeClass('show');
-        $('#' + href_id).addClass('show');
+        $(href_id).addClass('show');
     });
 function calculateNavHeight() {
     //calculate height of sidebar to fit with window height
