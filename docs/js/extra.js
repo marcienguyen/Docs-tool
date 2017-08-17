@@ -156,6 +156,10 @@ function onScroll(event){
             //currLink.removeClass("active");
         }
     });
+    $('.version-magento .dropdown-menu a').click(function(){
+        $('.version-magento .dropdown-menu a').removeClass('active');
+        $(this).addClass('active');
+    });
 }
 
 function calculateNavHeight() {
