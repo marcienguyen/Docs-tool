@@ -255,7 +255,7 @@ header{
     border-radius: 0px;
     flex-direction: column;
     position: fixed;
-    min-width: 267px;
+    max-width: 267px;
     font-size: 14px;
     /*overflow-y: scroll;
     max-height: 500px;*/
