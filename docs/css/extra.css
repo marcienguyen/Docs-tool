@@ -77,7 +77,7 @@ header{
     border-top: 1px solid #e0e0e0;
     z-index: 21;
 }
-.navbar .navbar-left > .nav-item > a:after {
+.navbar .navbar-left > .nav-item.menu > a:after {
     content: '';
     background:url('../img/arrow-down.png') no-repeat center;
     display: inline-block;
