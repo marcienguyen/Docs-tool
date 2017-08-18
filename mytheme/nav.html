@@ -22,7 +22,15 @@
                     </button>
                     {% endif %}
 
-        
+        <div class="col-sm-11 col-md-11 search-box">
+                <div class="nav-item item-search">
+                    <form class="form-inline w-100" id="form-search" role="form">
+                        <input class="w-100" type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        <i class="mobile-search-close-btn">x</i>
+                    </form>
+                    <div id="mkdocs-search-results"><p>No results found</p></div>
+                </div>
+            </div>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="hidden-xs-down col-sm-12 col-md-12 mobile-search-btn">
@@ -57,16 +65,7 @@
             </ul>
             {% endif %}
 
-            <div class="col-sm-11 col-md-11 search-box">
-                <div class="nav-item item-search">
-                    <form class="form-inline w-100" id="form-search" role="form">
-                        <input class="w-100" type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                        <i class="mobile-search-close-btn">x</i>
-                    </form>
-                    <div id="mkdocs-search-results"><p>No results found</p></div>
-                </div>
-            </div>
-
+            
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <span class="search-btn">
