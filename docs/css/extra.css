@@ -638,6 +638,7 @@ header{
     background-repeat: no-repeat, repeat;
     background-position: center bottom, center;}
     .homepage-content .wrap-homepage .slide-03 .title-box-ms{margin-bottom:5px;}
+    #sideNav .bs-sidenav {min-width: 267px;}
 }
     
     
