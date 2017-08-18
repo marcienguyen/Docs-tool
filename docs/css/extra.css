@@ -547,12 +547,12 @@ header{
 }
 .homepage-content .wrap-homepage .slide-01{
     color:#fff;
-    text-align:center;padding:70px 0 219px;
+    text-align:center;padding:50px 0 219px;
     background: url(../img/bg-slide1.png), url(../img/bg-slide1-4.png) ;
     background-repeat:no-repeat, repeat;
     background-position:center bottom, center;
 }
-.homepage-content .wrap-homepage .slide-01 .title-page{color:#fff;font-size: 42px;font-weight: bold;margin-bottom:30px}
+.homepage-content .wrap-homepage .slide-01 .title-page{color:#fff;font-size: 42px;font-weight: 600;margin-bottom:18px}
 .homepage-content .wrap-homepage .slide-01 .desc-title{font-size:16px;margin-bottom:30px}
 .form-search-home .input-box{display:flex;width: 80%;margin: 0 auto;}
 .form-search-home .input-box input[type='text']{
