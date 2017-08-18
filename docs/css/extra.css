@@ -616,3 +616,13 @@ header{
 .homepage-content .wrap-homepage .slide-04 .title-box{font-size:36px;font-weight:600;color:#fff;    text-align: center;margin-bottom: 35px;}
 .homepage-content .wrap-homepage .slide-04 .actions{text-align:center}
 .homepage-content .wrap-homepage .slide-04 .actions a{border-radius:3px;line-height:46px;background:#95590a;text-align:center;display:inline-block;padding: 0 50px;color:#fff;font-size:22px;font-weight:600;}
+
+@media (max-width: 575px){
+    .homepage-content .wrap-homepage .slide-02  ul.list-exts{margin-bottom:50px;padding-right:0}
+    .homepage-content .wrap-homepage .slide-02  ul.list-exts li{text-align:center}
+    .homepage-content .wrap-homepage .slide-02 .title-box-sm:before{margin-bottom:10px;}
+    .homepage-content .wrap-homepage .slide-03 .desc-title{margin-bottom:50px}
+}
+    
+    
+    
