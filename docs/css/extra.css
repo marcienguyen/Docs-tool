@@ -629,6 +629,13 @@ header{
     .mobile-search-btn > span {width: 80px;height: 55px;position: absolute;right: 66px;}
     .mobile-search-btn .fa {background: transparent;color: #fff;}
     .navbar-light .navbar-toggler {border-color: rgba(255,255,255,.1);}
+    .homepage-content .wrap-homepage .slide-01{
+        color: #fff;
+    text-align: center;
+    padding: 70px 0 228px;
+    background: url(../img/bg-slide1-mobile.png), url(../img/bg-slide1-4.png);
+    background-repeat: no-repeat, repeat;
+    background-position: center bottom, center;}
 }
     
     
