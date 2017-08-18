@@ -67,10 +67,11 @@
     
         {% include "nav.html" %}
     
-    <div class="container-fluid main-content">
+    <div class="main-content">
         
             {% block content %}
             {% if not page.is_homepage %}
+        <div class="container"><div class="row">
             <div class="col col-md-3">
                 {% if page.meta.tags %}
                 <div class="tags hidden-print" id="tags">
@@ -89,6 +90,7 @@
                 {% endif %}
                 {% endif %}
             </div>
+            </div></div>
             {% else %}
              <div class="main-home" role="main">
                 {% include "homepage.html" %}
