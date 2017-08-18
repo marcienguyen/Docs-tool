@@ -626,6 +626,9 @@ header{
     .navbar .navbar-left > .nav-item > a,
     .menu > ul > li a,
     .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .open>.nav-link{color:#000}
+    .mobile-search-btn > span {width: 80px;height: 55px;position: absolute;right: 66px;top:-20px;}
+    .mobile-search-btn .fa {background: transparent;color: #fff;}
+    .navbar-light .navbar-toggler {border-color: rgba(255,255,255,.1);}
 }
     
     
