@@ -127,7 +127,7 @@ header{
     display: block;
     padding: 5px 10px;
 }
-.navbar-toggler-right{top: 0.7rem;}
+.navbar-toggler-right{top: 1.7rem;}
 .wap-container{width:100%}
 /*Menu*/
 .menu{
@@ -324,7 +324,7 @@ header{
     height: 55px;
     position: absolute;
     right: 0px;
-    top: 0px;
+    top:17px;
 }
 .mobile-search-btn .fa {
     display: block;
