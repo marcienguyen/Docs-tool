@@ -622,6 +622,10 @@ header{
     .homepage-content .wrap-homepage .slide-02  ul.list-exts li{text-align:center}
     .homepage-content .wrap-homepage .slide-02 .title-box-sm:before{margin-bottom:10px;}
     .homepage-content .wrap-homepage .slide-03 .desc-title{margin-bottom:50px}
+    .navbar-nav.navbar-left{position: absolute;right: 0;width: 100%;background: #fff;}
+    .navbar .navbar-left > .nav-item > a,
+    .menu > ul > li a,
+    .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .open>.nav-link{color:#000}
 }
     
     
