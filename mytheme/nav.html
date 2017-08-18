@@ -5,18 +5,19 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="wrap-nav">
-        {% if nav|length>1 or (page.next_page or page.previous_page) or config.repo_url %}
-       <div class="hidden-ms-up mobile-search-btn">
-            <span>
-                <i class="fa fa-search"></i>
-                <!--<i class="fa fa-search-close">x</i>-->
-            </span>
-        </div>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        {% endif %}
+                     <div class="hidden-ms-up mobile-search-btn">
+                        <span>
+                            <i class="fa fa-search"></i>
+                            <!--<i class="fa fa-search-close">x</i>-->
+                        </span>
+                    </div>
+                    {% if nav|length>1 or (page.next_page or page.previous_page) or config.repo_url %}
+
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% endif %}
 
         <div class="navbar-brand">
             <a class="navbar-logo" href="https://docs.magestore.com"><img src="{{ base_url }}/img/logo.png" alt="Magestore"></a>           
