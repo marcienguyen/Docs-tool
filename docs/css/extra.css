@@ -586,6 +586,7 @@ header{
 .homepage-content .wrap-homepage .slide-02 .ux-improvement:before{background-position:-274px 0}
 .homepage-content .wrap-homepage .slide-02  ul.list-exts{margin:0;padding:0 0 0 40px;text-align:left}
 .homepage-content .wrap-homepage .slide-02  ul.list-exts li{list-style:none;}
+.homepage-content .wrap-homepage .slide-02  ul.list-exts li a{color:#4b4b4b;text-decoration:none;cursor:pointer}
 .homepage-content .wrap-homepage .slide-02  button{}
 .tab-content>.active{opacity:1}
 .version-magento .caret {
