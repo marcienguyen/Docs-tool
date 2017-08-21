@@ -603,6 +603,7 @@ header{
 .version-magento .nav-pills li,
 .version-magento .nav-pills{display:inline-block;}
 .version-magento .nav-pills li{padding: 10px 20px;border-radius: 3px;border:1px solid #e68e19}
+.version-magento .nav-pills li label{color:#4b4b4b}
 .version-magento .nav-pills li.active{background:#e68e19}
 .version-magento .nav-pills li a{color:#4b4b4b;font-size:16px;}
 .version-magento .nav-pills li.active a{color:#fff}
