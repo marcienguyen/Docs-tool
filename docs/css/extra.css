@@ -622,7 +622,7 @@ header{
 @media (max-width: 992px){
     .homepage-content .wrap-homepage .slide-02  ul.list-exts{margin-bottom:50px;    padding-left: calc(50% - 94px);}
     .homepage-content .wrap-homepage .slide-02  ul.list-exts li{}
-    .homepage-content .wrap-homepage .slide-02 .title-box-sm:before{margin-bottom:10px;}
+    .homepage-content .wrap-homepage .slide-02 .title-box-sm:before{margin-bottom:10px;    margin-left: 0;}
     .homepage-content .wrap-homepage .slide-02 .title-box-sm {text-align: left;padding-left: calc(50% - 95px);}
     .homepage-content .wrap-homepage .slide-03 .desc-title{margin-bottom:50px}
     .navbar-nav.navbar-left{position: absolute;right: 0;width: 100%;background: #fff;top:69px;}
