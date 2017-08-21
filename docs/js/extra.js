@@ -158,9 +158,9 @@ function onScroll(event){
     });
     
 }
-$('.version-magento .nav-pills a').click(function(){
-        $('.version-magento .nav-pills a').removeClass('active');
-        var href_id = $(this).attr('href');
+$('.version-magento .nav-pills li').click(function(){
+        $('.version-magento .nav-pills li').removeClass('active');
+        var href_id = $(this).find('a').attr('href');
         $(this).addClass('active');
         $('.slide-02 .tab-pane').removeClass('show in active');
         $(href_id).addClass('show in active');
