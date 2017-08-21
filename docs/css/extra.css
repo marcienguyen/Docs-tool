@@ -601,7 +601,8 @@ header{
 }
 .version-magento{margin:20px auto 70px}
 .version-magento .nav-pills li,
-.version-magento .nav-pills{display:inline-block}
+.version-magento .nav-pills{display:inline-block;}
+.version-magento .nav-pills li{padding: 10px 20px;border-radius: 3px;border:1px solid #e68e19}
 .dropdown-menu{padding: 20px;width:100%;border:1px solid #4b4b4b}
 .version-magento [data-toggle="dropdown"]{display:block;border:1px solid #e68e19;border-radius:3px;height:46px;line-height:46px;color:#4b4b4b;font-size:16px;}
 .version-magento [data-toggle="dropdown"]:hover{text-decoration:none}
