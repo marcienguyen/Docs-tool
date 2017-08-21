@@ -158,8 +158,8 @@ function onScroll(event){
     });
     
 }
-$('.version-magento .dropdown-menu a').click(function(){
-        $('.version-magento .dropdown-menu a').removeClass('active');
+$('.version-magento .nav-pills a').click(function(){
+        $('.version-magento .nav-pills a').removeClass('active');
         var href_id = $(this).attr('href');
         $(this).addClass('active');
         $('.slide-02 .tab-pane').removeClass('show in active');
