@@ -160,8 +160,7 @@ function onScroll(event){
 }
 $('.version-magento .nav-pills li').click(function(){
         $('.version-magento .nav-pills li').removeClass('active');
-        var href_id = $(this).children('a').attr('href');
-        console.log(href_id);
+        var href_id = $(this).children('a').attr('href');        
         $(this).addClass('active');
         $('.slide-02 .tab-pane').removeClass('show in active');
         $(href_id).addClass('show in active');
