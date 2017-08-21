@@ -577,7 +577,7 @@ header{
   color: #b3b3b3;font-size:16px;font-style:italic;
 }
 .homepage-content .wrap-homepage .slide-02{clear:both;padding:55px 0 80px;text-align:center}
-.homepage-content .wrap-homepage .slide-02 .title-box{font-size:36px;font-weight:600}
+.homepage-content .wrap-homepage .slide-02 .title-box{font-size:36px;font-weight:600;margin-bottom: 40px;}
 .homepage-content .wrap-homepage .slide-02 .title-box-sm{color:#4b4b4b;font-size:16px;font-weight:600;text-align:center}
 .homepage-content .wrap-homepage .slide-02 .title-box-sm:before{margin:0 auto 35px;content:' ';display:block;text-align:center;background:url('../img/img-common.png') no-repeat;width:83px;height:93px;}
 .homepage-content .wrap-homepage .slide-02 .omnichannel:before{background-position:0 0}
