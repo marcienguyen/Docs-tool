@@ -584,7 +584,8 @@ header{
 .homepage-content .wrap-homepage .slide-02 .sale-marketing:before{background-position:-101px 0;    width: 48px;}
 .homepage-content .wrap-homepage .slide-02 .ui-optimization:before{background-position:-170px 0}
 .homepage-content .wrap-homepage .slide-02 .ux-improvement:before{background-position:-274px 0}
-.homepage-content .wrap-homepage .slide-02  ul.list-exts{margin:0;padding:0 0 0 40px;text-align:left}
+.homepage-content .wrap-homepage .slide-02  ul.list-exts{margin:0;padding:0 0 0 60px;text-align:left}
+.homepage-content .wrap-homepage .slide-02  ul.list-exts:fisrt-child(padding-left:40px)
 .homepage-content .wrap-homepage .slide-02  ul.list-exts li{list-style:none;}
 .homepage-content .wrap-homepage .slide-02  ul.list-exts li a{color:#4b4b4b;text-decoration:none;cursor:pointer}
 .homepage-content .wrap-homepage .slide-02  button{}
