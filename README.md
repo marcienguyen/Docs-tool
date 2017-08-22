@@ -30,7 +30,7 @@
 
 ### If only run and rebuild
 ```
-  # docker run -it --rm -d --name docs_tool -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" docs_tool
+  # docker run -it --rm -d -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" docs_tool
 ```
 
 ## Theme User Guide
