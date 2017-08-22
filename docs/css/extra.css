@@ -625,8 +625,8 @@ header{
 .homepage-content .wrap-homepage .slide-04{background:#e78f1a;padding:110px 0;}
 .homepage-content .wrap-homepage .slide-04 .title-box{font-size:36px;font-weight:600;color:#fff;    text-align: center;margin-bottom: 35px;}
 .homepage-content .wrap-homepage .slide-04 .actions{text-align:center}
-.form-search-home .input-box .btn-search:hover,
 .homepage-content .wrap-homepage .slide-04 .actions a{text-decoration: none;border-radius:3px;line-height:46px;background:#95590a;text-align:center;display:inline-block;padding: 0 50px;color:#fff;font-size:22px;font-weight:600;}
+.form-search-home .input-box .btn-search:hover,
 .homepage-content .wrap-homepage .slide-04 .actions a:hover{text-decoration: none;box-shadow: 0 0 1px rgba(76,86,103,.25), 0 2px 18px rgba(31,37,50,.32);
     -webkit-box-shadow: 0 0 1px rgba(76,86,103,.25), 0 2px 18px rgba(31,37,50,.32);
     -moz-box-shadow: 0 0 1px rgba(76,86,103,.25),0 2px 18px rgba(31,37,50,.32);cursor:pointer}
