@@ -212,14 +212,7 @@ header{
         border-bottom: 1px solid #cecece!important;
     }
     .navbar .nav-item:hover > ul, .menu.open > ul {
-        max-height: 900px;
-        position: absolute;
-        background: #fff;
-        min-width: 200px;
-        text-align: left;
-        border: 1px solid #cecece;
-        top: 40px;
-        z-index: 20;
+        display:block
     }
     .navbar .nav-item:hover > ul > li, .menu.open > ul > li {
         background: #fff;
@@ -239,6 +232,14 @@ header{
     }
     .navbar .nav-item > ul {
         transition: none;
+        max-height: 900px;
+        position: absolute;
+        background: #fff;
+        min-width: 200px;
+        text-align: left;
+        border: 1px solid #cecece;
+        top: 40px;
+        z-index: 20;
     }
     .menu-btn{
         display: none;
