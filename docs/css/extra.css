@@ -666,5 +666,7 @@ header{
     width: calc(100% - 374px);
     margin-left: 112px;
     margin-top: 7px;
+    display:none;
 }
+#mkdocs-search-results-2.active{display:block}
 #mkdocs-search-results-2 a{font-size:16px;}   
