@@ -240,6 +240,7 @@ header{
         border: 1px solid #cecece;
         top: 40px;
         z-index: 20;
+        display:none
     }
     .menu-btn{
         display: none;
