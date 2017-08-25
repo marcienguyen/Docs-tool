@@ -240,9 +240,11 @@ require([
                 doc.summary = doc.text.substring(0, 200);
                 var html = Mustache.to_html(results_template, doc);
                 search_results.insertAdjacentHTML('beforeend', html);
+                search_results.addClass('active');
             }
         } else {
             search_results.insertAdjacentHTML('beforeend', "<p>No results found</p>");
+            search_results.removeClass('active');
         }
 
     };
