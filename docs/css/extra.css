@@ -655,5 +655,14 @@ header{
     #sideNav .bs-sidenav {min-width: 267px;}
 }
     
-    
-    
+#mkdocs-search-results-2{background: #fff;
+    color: #000;
+    text-align: left;
+    padding: 50px 20px;
+    max-height: 400px;
+    overflow: auto;
+    width: calc(100% - 374px);
+    margin-left: 112px;
+    margin-top: 7px;
+}
+#mkdocs-search-results-2 a{font-size:16px;}   
