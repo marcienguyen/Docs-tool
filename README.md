@@ -1,11 +1,17 @@
 # Use Guide
 
-## How to run it:
+## Quick use:
+
+### Build
 
 ```
-  # docker build --rm -t docs_tool . \
-    ; docker stop docs_tool && docker container rm docs_tool \
-    ; docker run -it -d --rm --name docs_tool docs_tool
+  # docker build -t docs_tool .
+```
+
+### Run
+
+```
+  # docker run -it --rm -d docs_tool
 ```
 
 ### If use with serve and port running
@@ -36,3 +42,9 @@
 ## Theme User Guide
 - Read document https://realpython.com/blog/python/primer-on-jinja-templating/
 - http://jinja.pocoo.org/docs/2.9/templates/#list-of-control-structures
+
+## Clear old image and container
+
+```
+  # docker stop docs_tool && docker container rm docs_tool
+```
