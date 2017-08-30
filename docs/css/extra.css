@@ -187,7 +187,7 @@ header{
 .menu .open a {
     background-color: #fff!important;
 }
-.wrap-nav{display:flex;justify-content:space-between;padding: 20px 0;}
+.wrap-nav{display:flex;justify-content:space-between;padding: 10px 0;}
 
 @media all and (min-width: 992px){
     .navbar .nav-item:hover, .menu.open {
