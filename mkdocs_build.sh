@@ -16,25 +16,58 @@ if [ $GITHUB_TOKEN != '' ]; then
   fi
 fi
 
+## function check git status
+_check_git() {
+    UPSTREAM=${1:-'@{u}'}
+    LOCAL=$(git rev-parse @)
+    REMOTE=$(git rev-parse "$UPSTREAM")
+    BASE=$(git merge-base @ "$UPSTREAM")
+
+    if [ $LOCAL = $REMOTE ]; then
+        echo "Up-to-date"
+    elif [ $LOCAL = $BASE ]; then
+        echo "pull"
+    elif [ $REMOTE = $BASE ]; then
+        echo "push"
+    else
+        echo "Diverged"
+    fi
+}
+
+need_to_build=true
+
 # clone docs from github and build
 if [ ! -d $MYDOCS -o ! -d $MYDOCS/.git ]; then
   echo "Clone from github"
   git clone https://github.com/Magestore/Docs.git $MYDOCS
 else
-  echo "Pull from github"
-  cd $MYDOCS && git pull
-  cd ..
+  echo "Fetch from github"
+  cd $MYDOCS && git fetch
+  git_status_check=$( cd $MYDOCS && _check_git )
+  if [ "$git_status_check" = "pull" ]; then
+    echo "Pull from github"
+    cd $MYDOCS && git pull
+    cd ..
+    need_to_build=false
+  fi
 fi
 
-echo "Copy from ${MYDOCS}/extensions/ to ${MYAPP}/docs/"
-cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
+## Build mkdocs
+if [ $need_to_build = true ]; then
+  echo "Copy from ${MYDOCS}/extensions/ to ${MYAPP}/docs/"
+  cp -Rf ${MYDOCS}/extensions/* ${MYAPP}/docs/
+  # stop mkdocs
+  # ps c | grep mkdocs | awk '{print $1}' | xargs kill -9
+  # start build
+  echo "MkDocs build"
+  cd ${MYAPP} && sudo mkdocs build
+  cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
 
-# stop mkdocs
-#ps c | grep mkdocs | awk '{print $1}' | xargs kill -9
-# start build
-echo "MkDocs build"
-cd ${MYAPP} && sudo mkdocs build
-cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
+  echo "---- Build complete ----"
+else
+  echo "---- No Build ----"
+fi
+
 # start mkdocs
 #mkdocs serve -a 0.0.0.0:8002
 
@@ -49,7 +82,6 @@ cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_T
 #   && git push origin master
 #rm -rf /tmp/Docs
 
-echo "---- Build complete ----"
 
 #echo "Build complete infomations:"
 #echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
