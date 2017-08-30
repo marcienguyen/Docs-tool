@@ -21,6 +21,14 @@ If run with specify a volume data
   # docker run -it --rm -d -v "$(pwd)/data:/mkdocs/data" docs_tool
 ```
 
+Run and rebuild
+
+```
+  # docker run -it --rm -d
+        -v "$(pwd)/data:/mkdocs/data" \
+        -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" docs_tool
+```
+
 ### If use with serve and port running
 
 ```
@@ -41,10 +49,7 @@ If run with specify a volume data
   # docker run -it --rm -d --name docs_tool docs_tool
 ```
 
-### If only run and rebuild
-```
-  # docker run -it --rm -d -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" docs_tool
-```
+
 
 ## Theme User Guide
 - Read document https://realpython.com/blog/python/primer-on-jinja-templating/
