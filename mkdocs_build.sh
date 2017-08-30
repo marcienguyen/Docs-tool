@@ -47,6 +47,7 @@ else
     echo "Pull from github"
     cd $MYDOCS && git pull
     cd ..
+  else
     need_to_build=false
   fi
 fi
