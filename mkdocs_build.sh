@@ -51,10 +51,10 @@ cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_T
 
 echo "---- Build complete ----"
 
-echo "Build complete infomations:"
-echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
-echo "Token: $( cat /root/.git-credentials )"
-echo "My app dir ${MYAPP}"
-echo "My docs dir ${MYDOCS}"
-echo "---------------------"
+#echo "Build complete infomations:"
+#echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
+#echo "Token: $( cat /root/.git-credentials )"
+#echo "My app dir ${MYAPP}"
+#echo "My docs dir ${MYDOCS}"
+#echo "---------------------"
 exit
