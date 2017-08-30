@@ -24,7 +24,7 @@ If run with specify a volume data
 Run and rebuild
 
 ```
-  # docker run -it --rm -d
+  # docker run -it --rm -d \
         -v "$(pwd)/data:/mkdocs/data" \
         -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" docs_tool
 ```
