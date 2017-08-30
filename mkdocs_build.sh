@@ -42,8 +42,7 @@ if [ ! -d $MYDOCS -o ! -d $MYDOCS/.git ]; then
   git clone https://github.com/Magestore/Docs.git $MYDOCS
 else
   echo "Fetch from github"
-  cd $MYDOCS && git fetch
-  git_status_check=$( cd $MYDOCS && _check_git )
+  git_status_check=$( cd $MYDOCS && git fetch && _check_git )
   if [ "$git_status_check" = "pull" ]; then
     echo "Pull from github"
     cd $MYDOCS && git pull
