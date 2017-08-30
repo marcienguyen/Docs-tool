@@ -55,3 +55,10 @@ If run with specify a volume data
 ```
   # docker stop docs_tool && docker container rm docs_tool
 ```
+
+## Setup mkdocs
+
+On github repository https://github.com/Magestore/Docs
+When run the command mkdocs gh-deploy, Mkdocs will push automatically to gh-pages branch.
+To settup it. Go to Settings > GitHub Pages > Source choose gh-pages branch on dropdown and save. After that go to
+domain manage to setup dns point to github dns.
