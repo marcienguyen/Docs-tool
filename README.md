@@ -15,6 +15,7 @@
 ```
 
 Volume to storage data is /mkdocs/data
+If run with specify a volume data
 
 ```
   # docker run -it --rm -d -v "$(pwd)/data:/mkdocs/data" docs_tool
