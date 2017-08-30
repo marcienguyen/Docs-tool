@@ -1,4 +1,4 @@
-#/bin/bash
+#!/usr/bin/env bash
 
 # set environment to instance (use for cronjob script)
 export GITHUB_TOKEN=${GITHUB_TOKEN}

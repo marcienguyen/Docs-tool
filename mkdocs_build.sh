@@ -5,7 +5,7 @@ echo "Build date -------- ( $(date) ) ---------"
 
 WORKDIR=/mkdocs
 MYAPP=/mkdocs/app
-MYDOCS=/mkdocs/my-docs
+MYDOCS=/mkdocs/data
 
 # check token exist
 GITHUB_TOKEN=$( cat ${WORKDIR}/GITHUB_TOKEN )
@@ -17,7 +17,7 @@ if [ $GITHUB_TOKEN != '' ]; then
 fi
 
 # clone docs from github and build
-if [ ! -d $MYDOCS ]; then
+if [ ! -d $MYDOCS -o ! -d $MYDOCS/.git ]; then
   echo "Clone from github"
   git clone https://github.com/Magestore/Docs.git $MYDOCS
 else

@@ -14,6 +14,12 @@
   # docker run -it --rm -d docs_tool
 ```
 
+Volume to storage data is /mkdocs/data
+
+```
+  # docker run -it --rm -d -v "$(pwd)/data:/mkdocs/data" docs_tool
+```
+
 ### If use with serve and port running
 
 ```

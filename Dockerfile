@@ -16,6 +16,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #RUN apt-get install -y sudo
 
 RUN mkdir -p /mkdocs
+RUN mkdir -p /mkdocs/data
+
+VOLUME ["/mkdocs/data"]
 
 # Copy source over and create configs dir
 COPY . /mkdocs/
