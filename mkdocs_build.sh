@@ -74,6 +74,7 @@ if [ ! -f /mkdocs_first_build.flag ]; then
   echo "MkDocs first build"
   cd ${MYAPP} && sudo mkdocs build
   cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
+  echo $(date) ' mkdocs rebuild.' >> ${MYDOCS}/build.log
 fi
 
 # start mkdocs
