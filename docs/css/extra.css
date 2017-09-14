@@ -457,10 +457,10 @@ header{
 }
 /*Footer CSS*/
 #footer{
-    background-color: #31302B;
-    color: #A6ABB0;
-    padding: 20px 0;
-    font-size: 13px;
+    background-color: #000;
+    color: #686868;
+    padding: 38px 0;
+    font-size: 16px;
 }
 .dropdown-item {
     padding: 0px;
