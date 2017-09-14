@@ -68,6 +68,14 @@ else
   echo "---- No Build ----"
 fi
 
+## First build
+if [ ! -f /mkdocs_first_build.flag ]; then
+  touch /mkdocs_first_build.flag
+  echo "MkDocs first build"
+  cd ${MYAPP} && sudo mkdocs build
+  cd ${MYAPP} && sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_TOKEN}@github.com/Magestore/Docs.git
+fi
+
 # start mkdocs
 #mkdocs serve -a 0.0.0.0:8002
 
