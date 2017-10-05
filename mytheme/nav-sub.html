@@ -4,7 +4,7 @@
         <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
     </li>
     {% else %}
-    <li>
+    <li class="has-child">
         <a href="#">{{ nav_item.title }}</a>
         <ul>
         {% for nav_item in nav_item.children %}
