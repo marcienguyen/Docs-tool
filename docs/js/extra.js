@@ -44,6 +44,7 @@ $(document).ready(function(){
     /*var menux = $('.menu a.parent');
     $( '<span class="more"></span>' ).insertBefore(menux);*/
     $('.menu .more').click(function(){
+        $(this).parent().toggleClass('open');
         $(this).parent('.menu').toggleClass('open');
         $(this).next('ul').toggleClass('expand');
     });
