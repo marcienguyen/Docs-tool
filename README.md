@@ -5,7 +5,7 @@
 ### Step 1: Build mkdocs image
 ```
 $ git clone https://github.com/Magestore/Docs-tool.git
-$ cd clone Docs-tool && docker build -t docs_tool .
+$ cd Docs-tool && docker build -t docs_tool .
 ```
 
 ### Step 2: Build mkdocs container
