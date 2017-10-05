@@ -81,18 +81,6 @@ fi
 # start mkdocs
 #mkdocs serve -a 0.0.0.0:8002
 
-## Copy html built and push to github
-#echo "Copy from ${MYAPP}/site/* to /tmp/Docs/docs/"
-#git clone https://github.com/Magestore/Docs.git /tmp/Docs
-#rsync -aAh ${MYAPP}/site/ /tmp/Docs/docs/
-#
-#cd /tmp/Docs \
-#   && git add . \
-#   && git commit -m "Build documents" \
-#   && git push origin master
-#rm -rf /tmp/Docs
-
-
 #echo "Build complete infomations:"
 #echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
 #echo "Token: $( cat /root/.git-credentials )"
