@@ -46,7 +46,7 @@ else
   if [ "$git_status_check" = "pull" ]; then
     echo "Pull from github"
     cd $MYDOCS && git pull
-    cd ..
+    cd $MYDOCS && git clean -fdx
   else
     need_to_build=false
   fi
