@@ -10,7 +10,7 @@ $ cd Docs-tool && docker build -t docs_tool .
 
 ### Step 2: Build mkdocs container
 ```
-docker run -itd --name mkdocs -v "/mkdocs/data:/mkdocs/data" \
+docker run -itd --name "mkdocs" -v "/mkdocs/data:/mkdocs/data" \
   -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" \
   docs_tool
 ```
