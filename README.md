@@ -2,8 +2,22 @@
 
 ## Quick use:
 
-### Build
+### Step 1: Build mkdocs image
+```git clone https://github.com/Magestore/Docs-tool.git```
+```cd clone Docs-tool && docker build -t docs_tool .```
 
+### Step 2: Build mkdocs container
+```docker run -itd --name mkdocs -v "/mkdocs/data:/mkdocs/data" -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" docs_tool```
+
+### Step 3: Add every run time to cronjob
+```$ vi /etc/crontab```
+add run command to crontab
+```*/2 * * * * root docker start mkdocs 2>&1 >/dev/null &```
+
+
+## Other command:
+
+### Build
 ```
   # docker build -t docs_tool .
 ```
@@ -48,8 +62,6 @@ Run and rebuild
 ```
   # docker run -it --rm -d --name docs_tool docs_tool
 ```
-
-
 
 ## Theme User Guide
 - Read document https://realpython.com/blog/python/primer-on-jinja-templating/
