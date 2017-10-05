@@ -1,4 +1,5 @@
 #!/bin/sh
+## Push docs folder built to github page
 
 MYAPP=/mkdocs/app
 MYDOCS=/mkdocs/my-docs
