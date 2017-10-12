@@ -14,7 +14,9 @@ echo ${GITHUB_TOKEN} > ./GITHUB_TOKEN
 mkdocs new app
 
 # remote default doc
-rm ./app/docs/index.md
+if [ -f ./app/docs/index.md ]; then
+  rm ./app/docs/index.md
+fi
 
 #sed -i 's/site_name: \(.*\)/site_name: Magestore Docs/' ./app/mkdocs.yml
 
