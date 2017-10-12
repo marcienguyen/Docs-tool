@@ -1,7 +1,7 @@
 #!/bin/sh
 
-echo "           ------------------------------"
-echo "Build date -------- ( $(date) ) ---------"
+echo "-----------------------------------------"
+echo "Build date ( $(date) )"
 
 WORKDIR=/mkdocs
 MYAPP=/mkdocs/app
