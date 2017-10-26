@@ -184,8 +184,8 @@ function calculateNavHeight() {
 require([
     base_url + '/search/mustache.min.js',
     base_url + '/search/lunr.min.js',
-    'text!search-results-template.mustache',
-    'text!../search_index.json',
+    'text!../search/search-results-template.mustache',
+    'text!../search/search_index.json',
 ], function (Mustache, lunr, results_template, data) {
     "use strict";
 
