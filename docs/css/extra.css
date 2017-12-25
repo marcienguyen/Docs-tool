@@ -297,6 +297,7 @@ header{
 
 .container .col-md-9[role="main"] {
     background-color: #fff;
+    margin-top: 20px;
 }
 .fa-search:before {
     content: "\f002";
@@ -627,7 +628,7 @@ header{
 .homepage-content .wrap-homepage .slide-03 .search-doc:before{background-position: -386px 0}
 .homepage-content .wrap-homepage .slide-03 .explore-doc:before{background-position: -461px 0}
 .homepage-content .wrap-homepage .slide-03 .download-doc:before{background-position: -547px 0}
-.homepage-content .wrap-homepage .slide-04{background:#df7531;padding:110px 0;}
+.homepage-content .wrap-homepage .slide-04{background:#318fdf;padding:110px 0;}
 .homepage-content .wrap-homepage .slide-04 .title-box{font-size:36px;font-weight:600;color:#fff;    text-align: center;margin-bottom: 35px;}
 .homepage-content .wrap-homepage .slide-04 .actions{text-align:center}
 .homepage-content .wrap-homepage .slide-04 .actions a{text-decoration: none;border-radius:3px;line-height: 55px;background:#09466d;text-align:center;display:inline-block;padding: 0 100px;color:#fff;font-size: 24px;font-weight:600;}
@@ -713,5 +714,26 @@ header{
     .col-sm-offset-0 {
         margin-left: 0;
     }
+}
+
+/* zeus add more css */
+.contact-us{
+    line-height: 45px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-align: right !important;
+    padding: 3px;
+    margin-left: 40px;
+}
+
+.contact-us a{
+    color: white;
+    text-align: right !important;
+}
+
+#sideNav li.toc-level-1{
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 -webkit-font-smoothing: antialiased;
