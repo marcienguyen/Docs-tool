@@ -43,17 +43,6 @@
     });
     </script>
 
-    <!--zeus add this script-->
-    <script src="https://www.googletagmanager.com/gtag/js?id=UA-24736539-50" crossorigin="anonymous"></script>
-    <script>
-        var base_url = '{{ base_url }}';
-    </script>
-    <script src="{{ base_url }}/js/gahead.js"></script>
-    {%- for path in extra_javascript %}
-    <script src="{{ path }}"></script>
-    {%- endfor %}
-    <!--end zeus add this script-->
-
 
     {% if config.google_analytics %}
     <script>
