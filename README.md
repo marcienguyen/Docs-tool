@@ -8,14 +8,19 @@ $ git clone https://github.com/Magestore/Docs-tool.git
 $ cd Docs-tool && docker build -t docs_tool .
 ```
 
-### Step 2: Build mkdocs container
+### Step 2: 
+1. Build mkdocs container
 ```
 docker run -itd --name "mkdocs" -v "/mkdocs/data:/mkdocs/data" \
   -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" \
   docs_tool
 ```
+2. Or run command
+```
+docker-compose up -d
+```
 
-### Step 3: Add every run time to cronjob
+### Step 3 (Optionals): Add every run time to cronjob
 ```$ vi /etc/crontab```
 add run command to crontab
 ```*/2 * * * * root docker start mkdocs 2>&1 >/dev/null &```
