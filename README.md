@@ -21,7 +21,7 @@ docker-compose up -d
 ```
 
 
-### Step 3 (Optionals): Add every run time to cronjob
+### Step 3: (Optionals) Add every run time to cronjob
 ```$ vi /etc/crontab```
 add run command to crontab
 ```*/2 * * * * root docker start mkdocs 2>&1 >/dev/null &```
