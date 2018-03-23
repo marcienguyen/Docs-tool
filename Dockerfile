@@ -2,7 +2,7 @@ FROM python:3.5
 
 LABEL maintainer "Robert <mrthinlt@gmail.com>"
 
-ENV GITHUB_TOKEN 3b56ffd5b88a495640a2ca29fc8583ca450bb141
+ENV GITHUB_TOKEN 4fcf1cd7028a3d54b784d277939ba4dd5be8541e
 
 # install app
 RUN apt-get update && apt-get install -y --no-install-recommends \
