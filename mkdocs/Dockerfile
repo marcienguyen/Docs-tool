@@ -24,7 +24,7 @@ RUN mkdocs --version
 # Pull Docs from github
 RUN mkdir -p /mkdocs/data
 RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data
-RUN ln -s /mkdocs/data/extensions ./data/docs
+RUN ln -s /mkdocs/data/extensions /mkdocs/data/docs
 
 WORKDIR /mkdocs
 
