@@ -1,8 +1,8 @@
-version: '2'
+version: "3"
 services:
   mkdocs:
     build: ./mkdocs
     container_name: mkdocs
     image: docs_tool
     volumes:
-      - data:/mkdocs/data
+      - "data:/mkdocs/data"
