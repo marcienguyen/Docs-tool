@@ -49,6 +49,9 @@ else
   fi
   popd
 fi
+if [ ! -f /mkdocs/data/docs ]; then
+  ln -s /mkdocs/data_docs/extensions /mkdocs/data/docs
+fi
 
 pushd /mkdocs/data
 ls -l
