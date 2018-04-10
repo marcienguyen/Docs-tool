@@ -46,6 +46,9 @@ else
   fi
 fi
 
+# copy theme
+cp -rp /mkdocs/data/docs_theme/* /mkdocs/data/docs/
+
 # build mkdocs
 echo "MkDocs build"
 pwd
