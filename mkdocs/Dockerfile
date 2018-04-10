@@ -40,7 +40,7 @@ COPY mkdocs_build.sh /mkdocs/mkdocs_build.sh
 COPY mkdocs_push.sh /mkdocs/mkdocs_push.sh
 COPY app.sh /mkdocs/app.sh
 COPY mkdocs.yml /mkdocs/data/mkdocs.yml
-COPY docs /mkdocs/data/docs
+COPY docs/* /mkdocs/data/docs/
 COPY mytheme /mkdocs/data/mytheme
 COPY other_themes /mkdocs/data/other_themes
 
