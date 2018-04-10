@@ -26,7 +26,7 @@ RUN mkdir -p /mkdocs/data
 RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data
 RUN ln -s /mkdocs/data/extensions /mkdocs/data/docs
 
-WORKDIR /mkdocs
+#WORKDIR /mkdocs
 
 # create mkdocs app
 #mkdocs new data
