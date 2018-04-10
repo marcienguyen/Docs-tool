@@ -51,4 +51,4 @@ ENV PORT=8002
 
 EXPOSE $PORT
 
-CMD ["/bin/sh", "app.sh"]
+CMD ["/bin/bash", "app.sh"]
