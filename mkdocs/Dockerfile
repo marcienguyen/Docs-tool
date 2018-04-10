@@ -25,8 +25,11 @@ RUN mkdocs --version
 
 # create mkdocs app
 mkdocs new data
-# remote default doc
+# remove default doc
 RUN rm ./data/docs/index.md
+
+RUN echo "Pull Docs"
+RUN git clone -b master --depth=1 ${DOCS_REPO} docs
 
 # Copy source over and create configs dir
 COPY mkdocs.yml /mkdocs/data/mkdocs.yml
