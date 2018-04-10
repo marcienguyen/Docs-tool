@@ -30,9 +30,9 @@ RUN mkdocs --version
 #RUN rm ./data/docs/index.md
 
 # Pull Docs from github
-RUN mkdir -p ./data_docs
-RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git ./data_docs
-RUN ln -s ./data_docs/extensions ./data/docs
+RUN mkdir -p ./data
+RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git ./data
+RUN ln -s ./data/extensions ./data/docs
 
 # Copy source over and create configs dir
 COPY mkdocs_build.sh /mkdocs/mkdocs_build.sh
