@@ -32,7 +32,8 @@ pushd ./data
 
 # clone docs from github and build
 if [ ! -d /mkdocs/data_docs -o ! -d /mkdocs/data_docs/.git ]; then
-  echo "Can not pull /mkdocs/data_docs/"
+  echo "Clone /mkdocs/data_docs/"
+  git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data_docs
 else
   echo "Pull from github"
   git_status_check=$( git fetch && _check_git )
