@@ -53,20 +53,14 @@ if [ ! -f /mkdocs/data/docs ]; then
   ln -s /mkdocs/data_docs/extensions /mkdocs/data/docs
 fi
 
-pushd /mkdocs/data
-ls -l
-popd
-
 # copy theme
 cp -rp /mkdocs/data/docs_theme/* /mkdocs/data/docs/
 
 # build mkdocs
 echo "MkDocs build"
+cd /mkdocs/data
 pwd
 ls -l
-echo "---"
-cd ./docs
-ls -l 
 sudo mkdocs build
 sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/Magestore/Docs.git
 popd
