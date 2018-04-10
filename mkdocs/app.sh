@@ -50,6 +50,10 @@ else
   popd
 fi
 
+pushd /mkdocs/data
+ls -l
+popd
+
 # copy theme
 cp -rp /mkdocs/data/docs_theme/* /mkdocs/data/docs/
 
