@@ -10,30 +10,46 @@ git config --global user.name "Mkdocs tool"
 echo "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com" > /root/.git-credentials
 echo ${GITHUB_TOKEN} > ./GITHUB_TOKEN
 
-# pull docs-tool repo
-git clone -b master --depth=1 ${IT_REPO}
-cp -rf ./docs/* ./app/docs/
+## function check git status
+_check_git() {
+    UPSTREAM=${1:-'@{u}'}
+    LOCAL=$(git rev-parse @)
+    REMOTE=$(git rev-parse "$UPSTREAM")
+    BASE=$(git merge-base @ "$UPSTREAM")
 
-if [ -d ./mytheme ]; then
-  echo "Copy custom_theme"
-  mkdir -p ./app/mytheme
-  cp -r ./mytheme/* ./app/mytheme/
-else
-  mkdir -p ./app/mytheme
-fi
+    if [ $LOCAL = $REMOTE ]; then
+        echo "Up-to-date"
+    elif [ $LOCAL = $BASE ]; then
+        echo "pull"
+    elif [ $REMOTE = $BASE ]; then
+        echo "push"
+    else
+        echo "Diverged"
+    fi
+}
 
+pushd ./data
 
 # clone docs from github and build
-cp -f ./mkdocs_build.sh ./app/
+if [ ! -d ./data/docs -o ! -d ./data/docs/.git ]; then
+  echo "Clone Docs from github"
+  git clone -b master --depth=1 ${DOCS_REPO} ./data/docs
+else
+  echo "Pull from github"
+  git_status_check=$( cd ./data/docs && git fetch && _check_git )
+  if [ "$git_status_check" = "pull" ]; then
+    echo "Pull from github"
+    pushd ./docs
+    git pull
+    git clean -fdx
+    popd
+  fi
+fi
 
-# run build script
-cd ./app/ && /bin/sh ./mkdocs_build.sh
+# build mkdocs
+echo "MkDocs build"
+cd ./data
+sudo mkdocs build
+sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_USER}${GITHUB_TOKEN}@github.com/Magestore/Docs.git
 
-#service cron restart
-#sudo /etc/init.d/cron restart
-
-# run mkdocs with port
-#mkdocs serve -a 0.0.0.0:${PORT} --dirtyreload
-
-# wait for docker container running in minutes
-#sleep 1000
+echo "Build complete!"
