@@ -33,6 +33,7 @@ pushd ./data
 # clone docs from github and build
 if [ ! -d /mkdocs/data_docs -o ! -d /mkdocs/data_docs/.git ]; then
   echo "Clone /mkdocs/data_docs/"
+  ls -l /mkdocs/data_docs
   git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data_docs
 else
   echo "Pull from github"
