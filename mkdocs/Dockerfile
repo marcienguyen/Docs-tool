@@ -17,6 +17,7 @@ RUN mkdir -p /mkdocs/data
 WORKDIR /mkdocs
 
 # Install Mkdocs http://www.mkdocs.org/#installation
+COPY get-pip.py get-pip.py
 RUN chmod +x get-pip.py
 RUN python get-pip.py
 RUN pip install --upgrade pip
