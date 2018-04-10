@@ -2,8 +2,6 @@ FROM python:3.5
 
 LABEL maintainer "Robert <mrthinlt@gmail.com>"
 
-ENV GITHUB_TOKEN 4fcf1cd7028a3d54b784d277939ba4dd5be8541e
-
 # install app
 RUN apt-get update && apt-get install -y --no-install-recommends \
       sudo \
@@ -15,18 +13,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 #RUN apt-get install -y sudo
 
-RUN mkdir -p /mkdocs
 RUN mkdir -p /mkdocs/data
 
-VOLUME ["/mkdocs/data"]
-
 # Copy source over and create configs dir
-COPY . /mkdocs/
+COPY mkdocs.yml /mkdocs/data/mkdocs.yml
+COPY mkdocs_build.sh /mkdocs/mkdocs_build.sh
+COPY mkdocs_push.sh /mkdocs/mkdocs_push.sh
+COPY get-pip.py /mkdocs/get-pip.py
+COPY app.sh /mkdocs/app.sh
+COPY docs /mkdocs/docs
+COPY mytheme /mkdocs/mytheme
+COPY other_themes /mkdocs/other_themes
 
 WORKDIR /mkdocs
 
-
 # Install Mkdocs http://www.mkdocs.org/#installation
+RUN chmod +x get-pip.py
 RUN python get-pip.py
 RUN pip install --upgrade pip
 RUN pip install mkdocs
