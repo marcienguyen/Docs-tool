@@ -40,14 +40,14 @@ if [ ! -d /mkdocs/data_docs -o ! -d /mkdocs/data_docs/.git ]; then
   ln -s /mkdocs/data_docs/extensions /mkdocs/data/docs
 else
   echo "Pull from github"
+  pushd /mkdocs/data_docs/
   git_status_check=$( git fetch && _check_git )
   if [ "$git_status_check" = "pull" ]; then
     echo "Pull from github"
-    pushd /mkdocs/data_docs/
     git pull
     git clean -fdx
-    popd
   fi
+  popd
 fi
 
 # copy theme
