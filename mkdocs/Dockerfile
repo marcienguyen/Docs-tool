@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Install Mkdocs http://www.mkdocs.org/#installation
 COPY get-pip.py /mkdocs/get-pip.py
-RUN chmod +x get-pip.py
-RUN python get-pip.py
+RUN chmod +x /mkdocs/get-pip.py
+RUN python /mkdocs/get-pip.py
 RUN pip install --upgrade pip
 RUN pip install mkdocs
 RUN mkdocs --version
