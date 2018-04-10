@@ -25,6 +25,8 @@ RUN mkdocs --version
 
 # create mkdocs app
 mkdocs new data
+# remote default doc
+RUN rm ./data/docs/index.md
 
 # Copy source over and create configs dir
 COPY mkdocs.yml /mkdocs/data/mkdocs.yml
