@@ -6,3 +6,4 @@ services:
     image: docs_tool
     volumes:
       - "./data:/mkdocs/data"
+
