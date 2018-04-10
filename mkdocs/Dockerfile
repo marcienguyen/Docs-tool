@@ -21,10 +21,12 @@ RUN pip install --upgrade pip
 RUN pip install mkdocs
 RUN mkdocs --version
 
+VOLUME /mkdocs/data
+
 # Pull Docs from github
-RUN mkdir -p /mkdocs/data
-RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data
-RUN ln -s /mkdocs/data/extensions /mkdocs/data/docs
+RUN mkdir -p /mkdocs/data_docs
+RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data_docs
+RUN ln -s /mkdocs/data_docs/extensions /mkdocs/data/docs
 
 WORKDIR /mkdocs
 
@@ -47,7 +49,7 @@ COPY other_themes /mkdocs/data/other_themes
 #RUN echo "* * * * *     root      /bin/sh /mkdocs/update_docs.sh 2>&1 1>>/mkdocs/cron.log &" >> /etc/crontab
 #RUN service cron start
 
-VOLUME /mkdocs/data
+
 ENV PORT=8002
 EXPOSE $PORT
 
