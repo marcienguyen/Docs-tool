@@ -22,11 +22,10 @@ RUN pip install mkdocs
 RUN mkdocs --version
 
 # Pull Docs from github
-RUN mkdir -p ./data
-RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git ./data
-RUN ln -s ./data/extensions ./data/docs
-
 RUN mkdir -p /mkdocs/data
+RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data
+RUN ln -s /mkdocs/data/extensions ./data/docs
+
 WORKDIR /mkdocs
 
 # create mkdocs app
