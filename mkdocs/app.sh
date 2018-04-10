@@ -31,6 +31,8 @@ _check_git() {
 pushd ./data
 
 # clone docs from github and build
+ls -l /mkdocs
+ls -l /mkdocs/data_docs
 if [ ! -d /mkdocs/data_docs -o ! -d /mkdocs/data_docs/.git ]; then
   echo "Clone /mkdocs/data_docs/"
   ls -l /mkdocs/data_docs
