@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # set environment to instance (use for cronjob script)
-export GITHUB_TOKEN=${GITHUB_TOKEN}
+#export GITHUB_TOKEN=${GITHUB_TOKEN}
 
 # prepare github access token
 git config --global credential.helper store
 git config --global user.email "magestore.system@gmail.com"
 git config --global user.name "Mkdocs tool"
-echo "https://magestore.system:${GITHUB_TOKEN}@github.com" > /root/.git-credentials
+echo "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com" > /root/.git-credentials
 echo ${GITHUB_TOKEN} > ./GITHUB_TOKEN
 
 # create mkdocs app
