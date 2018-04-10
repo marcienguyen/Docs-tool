@@ -10,29 +10,8 @@ git config --global user.name "Mkdocs tool"
 echo "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com" > /root/.git-credentials
 echo ${GITHUB_TOKEN} > ./GITHUB_TOKEN
 
-# create mkdocs app
-mkdocs new app
-
-# remote default doc
-if [ -f ./app/docs/index.md ]; then
-  rm ./app/docs/index.md
-fi
-
-#sed -i 's/site_name: \(.*\)/site_name: Magestore Docs/' ./app/mkdocs.yml
-
-# rebuild from github
-if [ "${RE_BUILD:-}" ]; then
-  echo "Rebuild docs-tool"
-  if [ -d ./mytheme ]; then
-    rm -rf ./docs-tool
-  fi
-  git clone ${RE_BUILD} ./docs-tool
-  cp -rf ./docs-tool/* .
-fi
-
-# copy to replace default mkdocs.yml
-rm ./app/mkdocs.yml
-cp -f ./mkdocs.yml ./app/
+# pull docs-tool repo
+git clone -b master --depth=1 ${IT_REPO}
 cp -rf ./docs/* ./app/docs/
 
 if [ -d ./mytheme ]; then
