@@ -47,8 +47,8 @@ COPY other_themes /mkdocs/data/other_themes
 #RUN echo "* * * * *     root      /bin/sh /mkdocs/update_docs.sh 2>&1 1>>/mkdocs/cron.log &" >> /etc/crontab
 #RUN service cron start
 
+VOLUME /mkdocs/data
 ENV PORT=8002
-
 EXPOSE $PORT
 
 CMD ["/bin/bash", "app.sh"]
