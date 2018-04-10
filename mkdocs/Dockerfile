@@ -24,9 +24,10 @@ RUN mkdocs --version
 VOLUME /mkdocs/data
 
 # Pull Docs from github
-RUN mkdir -p /mkdocs/data_docs
-RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data_docs
-RUN ln -s /mkdocs/data_docs/extensions /mkdocs/data/docs
+#RUN mkdir -p /mkdocs/data_docs
+#RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data_docs
+#RUN ln -s /mkdocs/data_docs/extensions /mkdocs/data/docs
+ 
 
 WORKDIR /mkdocs
 
@@ -40,7 +41,7 @@ COPY mkdocs_build.sh /mkdocs/mkdocs_build.sh
 COPY mkdocs_push.sh /mkdocs/mkdocs_push.sh
 COPY app.sh /mkdocs/app.sh
 COPY mkdocs.yml /mkdocs/data/mkdocs.yml
-COPY docs/* /mkdocs/data/docs/
+COPY docs /mkdocs/data/docs_theme
 COPY mytheme /mkdocs/data/mytheme
 COPY other_themes /mkdocs/data/other_themes
 
