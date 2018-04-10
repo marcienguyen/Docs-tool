@@ -49,7 +49,10 @@ fi
 echo "MkDocs build"
 pwd
 ls -l
+echo "---"
+cd ./docs
+ls -l 
 sudo mkdocs build
-sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_USER}${GITHUB_TOKEN}@github.com/Magestore/Docs.git
+sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/Magestore/Docs.git
 popd
 echo "Build complete!"
