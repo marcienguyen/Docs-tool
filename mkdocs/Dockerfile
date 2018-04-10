@@ -14,6 +14,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #RUN apt-get install -y sudo
 
 RUN mkdir -p /mkdocs/data
+WORKDIR /mkdocs
+
+# Install Mkdocs http://www.mkdocs.org/#installation
+RUN chmod +x get-pip.py
+RUN python get-pip.py
+RUN pip install --upgrade pip
+RUN pip install mkdocs
+RUN mkdocs --version
+
+# create mkdocs app
+mkdocs new data
 
 # Copy source over and create configs dir
 COPY mkdocs.yml /mkdocs/data/mkdocs.yml
@@ -24,15 +35,6 @@ COPY app.sh /mkdocs/app.sh
 COPY docs /mkdocs/docs
 COPY mytheme /mkdocs/mytheme
 COPY other_themes /mkdocs/other_themes
-
-WORKDIR /mkdocs
-
-# Install Mkdocs http://www.mkdocs.org/#installation
-RUN chmod +x get-pip.py
-RUN python get-pip.py
-RUN pip install --upgrade pip
-RUN pip install mkdocs
-RUN mkdocs --version
 
 # Install cronjob
 #RUN echo "* * * * *     root      cd /mkdocs/app/ && /bin/sh ./mkdocs_build.sh 2>&1 1>>/mkdocs/cron.log &" >> /etc/crontab
