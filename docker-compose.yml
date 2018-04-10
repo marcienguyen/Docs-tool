@@ -3,3 +3,5 @@ mkdocs:
   build: ./mkdocs
   container_name: mkdocs
   image: docs_tool
+  volumes:
+    - data:/mkdocs/data
