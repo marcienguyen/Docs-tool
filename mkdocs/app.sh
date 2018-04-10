@@ -31,9 +31,10 @@ _check_git() {
 pushd ./data
 
 # clone docs from github and build
-if [ ! -d ./data/docs -o ! -d ./data/docs/.git ]; then
+if [ ! -d ./docs -o ! -d ./docs/.git ]; then
   echo "Clone Docs from github"
-  git clone -b master --depth=1 ${DOCS_REPO} ./data/docs
+  mkdir -p ./docs && rm -rf ./docs/*
+  git clone -b master --depth=1 ${DOCS_REPO} ./docs
 else
   echo "Pull from github"
   git_status_check=$( cd ./data/docs && git fetch && _check_git )
