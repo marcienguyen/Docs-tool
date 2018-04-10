@@ -31,17 +31,15 @@ _check_git() {
 pushd ./data
 
 # clone docs from github and build
-if [ ! -d /mkdocs/data_docs -o ! -d /mkdocs/data_docs/.git ]; then
+if [ ! -d /mkdocs/data -o ! -d /mkdocs/data/.git ]; then
   echo "Can not pull data_docs"
 else
   echo "Pull from github"
-  git_status_check=$( cd ./docs && git fetch && _check_git )
+  git_status_check=$( git fetch && _check_git )
   if [ "$git_status_check" = "pull" ]; then
     echo "Pull from github"
-    pushd ./docs
     git pull
     git clean -fdx
-    popd
   fi
 fi
 
