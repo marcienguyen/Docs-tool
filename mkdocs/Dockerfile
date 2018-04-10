@@ -34,9 +34,9 @@ COPY mkdocs_build.sh /mkdocs/mkdocs_build.sh
 COPY mkdocs_push.sh /mkdocs/mkdocs_push.sh
 COPY get-pip.py /mkdocs/get-pip.py
 COPY app.sh /mkdocs/app.sh
-COPY docs /mkdocs/docs
-COPY mytheme /mkdocs/mytheme
-COPY other_themes /mkdocs/other_themes
+COPY docs /mkdocs/data/docs
+COPY mytheme /mkdocs/data/mytheme
+COPY other_themes /mkdocs/data/other_themes
 
 # Install cronjob
 #RUN echo "* * * * *     root      cd /mkdocs/app/ && /bin/sh ./mkdocs_build.sh 2>&1 1>>/mkdocs/cron.log &" >> /etc/crontab
