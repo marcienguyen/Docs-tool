@@ -24,19 +24,19 @@ RUN pip install mkdocs
 RUN mkdocs --version
 
 # create mkdocs app
-mkdocs new data
+#mkdocs new data
 # remove default doc
-RUN rm ./data/docs/index.md
+#RUN rm ./data/docs/index.md
 
 RUN echo "Pull Docs"
-RUN git clone -b master --depth=1 ${DOCS_REPO} docs
+RUN git clone -b master --depth=1 ${DOCS_REPO} ./data/docs
 
 # Copy source over and create configs dir
-COPY mkdocs.yml /mkdocs/data/mkdocs.yml
 COPY mkdocs_build.sh /mkdocs/mkdocs_build.sh
 COPY mkdocs_push.sh /mkdocs/mkdocs_push.sh
 COPY get-pip.py /mkdocs/get-pip.py
 COPY app.sh /mkdocs/app.sh
+COPY mkdocs.yml /mkdocs/data/mkdocs.yml
 COPY docs /mkdocs/data/docs
 COPY mytheme /mkdocs/data/mytheme
 COPY other_themes /mkdocs/data/other_themes
