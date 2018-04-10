@@ -5,7 +5,7 @@
 
 # prepare github access token
 git config --global credential.helper store
-git config --global user.email "magestore.system@gmail.com"
+git config --global user.email "${GITHUB_USER}@gmail.com"
 git config --global user.name "Mkdocs tool"
 echo "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com" > /root/.git-credentials
 echo ${GITHUB_TOKEN} > ./GITHUB_TOKEN
