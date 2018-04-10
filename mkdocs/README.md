@@ -23,7 +23,7 @@ docker build --rm -t docs_tool .
 Sau khi mkdocs build xong thì trong script mkdocs_build.sh sẽ tự động push thư mục docs lên https://github.com/Magestore/Docs trên nhánh 
 gh-pages (là nhánh github page)
 
-**4. Mô hình cài đặt github page và custom theme**
+**4. Cấu hình web github page và custom theme**
 
 Tại setting của github page của https://github.com/Magestore/Docs/settings ta lấy được link github page tương ứng https://magestore.github.io/Docs/
 Tại nơi cấu hình domain docs.magestore.com trỏ vào ip 130.211.157.247, trên đó có cấu hình virtual host cho https và proxy đến link https://magestore.github.io/Docs/
