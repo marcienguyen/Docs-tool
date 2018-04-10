@@ -29,8 +29,8 @@ RUN mkdocs --version
 # remove default doc
 #RUN rm ./data/docs/index.md
 
-RUN echo "Pull Docs"
-RUN git clone -b master --depth=1 ${DOCS_REPO} ./data/docs
+# Pull Docs from github
+RUN git clone -b master --depth=1 ${DOCS_REPO} /mkdocs/data/docs
 
 # Copy source over and create configs dir
 COPY mkdocs_build.sh /mkdocs/mkdocs_build.sh
