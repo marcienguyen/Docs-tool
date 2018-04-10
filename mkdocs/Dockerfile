@@ -13,6 +13,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 #RUN apt-get install -y sudo
 
+# Install Mkdocs http://www.mkdocs.org/#installation
+COPY get-pip.py /mkdocs/get-pip.py
+RUN chmod +x get-pip.py
+RUN python get-pip.py
+RUN pip install --upgrade pip
+RUN pip install mkdocs
+RUN mkdocs --version
+
 # Pull Docs from github
 RUN mkdir -p ./data
 RUN git clone -b master --depth=1 https://github.com/Magestore/Docs.git ./data
@@ -20,14 +28,6 @@ RUN ln -s ./data/extensions ./data/docs
 
 RUN mkdir -p /mkdocs/data
 WORKDIR /mkdocs
-
-# Install Mkdocs http://www.mkdocs.org/#installation
-COPY get-pip.py get-pip.py
-RUN chmod +x get-pip.py
-RUN python get-pip.py
-RUN pip install --upgrade pip
-RUN pip install mkdocs
-RUN mkdocs --version
 
 # create mkdocs app
 #mkdocs new data
