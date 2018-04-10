@@ -6,4 +6,8 @@ services:
     image: docs_tool
     volumes:
       - "./data:/mkdocs/data"
-
+    environment:
+      GITHUB_USER: ${GITHUB_USER}
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
+      DOCS_TOOL: ${DOCS_TOOL}
+      DOCS_REPO: ${DOCS_REPO}
