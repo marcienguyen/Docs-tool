@@ -1,5 +1,5 @@
-docs-tool:
+version: '2'
+mkdocs:
+  build: ./mkdocs
   container_name: mkdocs
   image: docs_tool
-  environment:
-  - RE_BUILD=https://github.com/Magestore/Docs-tool.git
