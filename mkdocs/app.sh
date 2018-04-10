@@ -48,8 +48,7 @@ fi
 
 # build mkdocs
 echo "MkDocs build"
-cd ./data
 sudo mkdocs build
 sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_USER}${GITHUB_TOKEN}@github.com/Magestore/Docs.git
-
+popd
 echo "Build complete!"
