@@ -31,6 +31,7 @@ RUN mkdocs --version
 
 # Pull Docs from github
 RUN pwd
+RUN ls -l
 RUN git clone -b master --depth=1 ${DOCS_REPO} /mkdocs/data/docs
 
 # Copy source over and create configs dir
