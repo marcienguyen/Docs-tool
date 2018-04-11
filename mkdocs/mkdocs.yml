@@ -10,7 +10,12 @@ copyright: Magestore.com
 google_analytics: null
 site_favicon: img/favicon.ico
 #theme: readthedocs
-theme_dir: 'mytheme'
+theme:
+    custom_dir: mytheme/
+    static_templates:
+        - sitemap.html
+    include_sidebar: false
+
 extra_css:
     - css/extra.css
 extra_javascript: ["js/extra.js"]
