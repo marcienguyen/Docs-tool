@@ -2,14 +2,14 @@
 
 ## Quick use:
 
-### Step 1: Build mkdocs image
+### # Build mkdocs image
 ```
 $ git clone https://github.com/Magestore/Docs-tool.git
 $ cd Docs-tool && 
 $ sudo docker-compose up
 ```
 
-### Step 2: 
+### # 
 1. Rebuild the docker image
 ```
 $ cd Docs-tool
