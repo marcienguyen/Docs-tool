@@ -5,75 +5,23 @@
 ### Step 1: Build mkdocs image
 ```
 $ git clone https://github.com/Magestore/Docs-tool.git
-$ cd Docs-tool && docker build -t docs_tool .
+$ cd Docs-tool && 
+$ sudo docker-compose up
 ```
 
 ### Step 2: 
-1. Build mkdocs container
+1. Rebuild the docker image
 ```
-docker run -itd --name "mkdocs" -v "/mkdocs/data:/mkdocs/data" \
-  -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" \
-  docs_tool
+$ cd Docs-tool
+$ git pull
+$ sudo docker-compose build
 ```
 2. Or run command
 ```
-docker-compose up -d
+$ sudo docker-compose up --build
 ```
 
-
-### Step 3: (Optionals) Add every run time to cronjob
-```$ vi /etc/crontab```
-add run command to crontab
-```*/2 * * * * root docker start mkdocs 2>&1 >/dev/null &```
-
-----------------------------------------------------
-## Other command:
-
-### Build
-```
-  # docker build -t docs_tool .
-```
-
-### Run
-
-```
-  # docker run -it --rm -d docs_tool
-```
-
-Volume to storage data is /mkdocs/data
-If run with specify a volume data
-
-```
-  # docker run -it --rm -d -v "$(pwd)/data:/mkdocs/data" docs_tool
-```
-
-Run and rebuild
-
-```
-  # docker run -it --rm -d \
-        -v "$(pwd)/data:/mkdocs/data" \
-        -e RE_BUILD="https://github.com/Magestore/Docs-tool.git" docs_tool
-```
-
-### If use with serve and port running
-
-```
-  # docker build --rm -t docs_tool . \
-    ; docker stop docs_tool && docker container rm docs_tool \
-    ; docker run -it -d -p 8002:8002 --name docs_tool --restart="on-failure" docs_tool
-```
-
-### If run one time and see processing
-```
-  # docker build --rm -t docs_tool . \
-    ; docker stop docs_tool && docker container rm docs_tool \
-    ; docker run -it --rm -p 8002:8002 --name docs_tool docs_tool  
-```
-
-### If only run single app
-```
-  # docker run -it --rm -d --name docs_tool docs_tool
-```
+-----------------------------------------------------------------------------
 
 ## Theme User Guide
 - Read document https://realpython.com/blog/python/primer-on-jinja-templating/
