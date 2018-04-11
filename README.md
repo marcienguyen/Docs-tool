@@ -9,7 +9,8 @@ $ cd Docs-tool &&
 $ sudo docker-compose up
 ```
 
-### # 
+### #..
+
 1. Rebuild the docker image
 ```
 $ cd Docs-tool
