@@ -5,7 +5,8 @@
 ### #2 Build and run:
 ```
 $ git clone https://github.com/Magestore/Docs-tool.git
-$ cd Docs-tool && 
+$ cd Docs-tool
+$ cp .env.example .env # and modify environment variables
 $ sudo docker-compose up
 ```
 
