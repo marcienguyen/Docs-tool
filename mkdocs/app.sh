@@ -29,8 +29,9 @@ _check_git() {
 }
 
 # clone docs from github and build
-if [ ! -d /mkdocs/data -o ! -d /mkdocs/data/.git ]; then
+if [ ! -d /mkdocs/data/.git ]; then
   echo "Clone: /mkdocs/data/"
+  mkdir -p /mkdocs/data && rm -rf /mkdocs/data/*
   git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data
 else
   echo "Pull: /mkdocs/data/"
