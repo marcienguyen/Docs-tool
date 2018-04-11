@@ -1,5 +1,6 @@
 site_name: MagestoreDocs
-site_dir: /mkdocs/data/site
+docs_dir: ./extensions
+site_dir: ./site
 site_url: https://docs.magestore.com
 repo_url: https://github.com/Magestore/Docs
 repo_name: 'GitHub'
