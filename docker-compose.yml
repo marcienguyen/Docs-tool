@@ -4,7 +4,8 @@ services:
     build: ./mkdocs
     image: docstool
     volumes:
-      - "./:/mkdocs"
+      - "./data:/mkdocs/data"
+      - "./mkdocs:/mkdocs"
     environment:
       GITHUB_USER: ${GITHUB_USER}
       GITHUB_TOKEN: ${GITHUB_TOKEN}
