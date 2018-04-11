@@ -1,8 +1,8 @@
 # Use Guide
 
 ## Quick use:
-
-### # Build and run:
+### #1 Install docker-ce
+### #2 Build and run:
 ```
 $ git clone https://github.com/Magestore/Docs-tool.git
 $ cd Docs-tool && 
