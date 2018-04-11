@@ -11,6 +11,7 @@ google_analytics: null
 site_favicon: img/favicon.ico
 #theme: readthedocs
 theme:
+    name: mkdocs
     custom_dir: mytheme/
     static_templates:
         - sitemap.html
