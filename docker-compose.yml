@@ -2,10 +2,9 @@ version: "3"
 services:
   mkdocs:
     build: ./mkdocs
-    image: docs_tool
+    image: docstool
     volumes:
-      - "./data:/mkdocs/data_docs"
-      #- "./data/extensions:/mkdocs/data/docs"
+      - "./data:/mkdocs/data"
     environment:
       GITHUB_USER: ${GITHUB_USER}
       GITHUB_TOKEN: ${GITHUB_TOKEN}
