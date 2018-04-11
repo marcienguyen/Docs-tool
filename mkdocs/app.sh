@@ -28,33 +28,25 @@ _check_git() {
     fi
 }
 
-pushd ./data
-
 # clone docs from github and build
-ls -l /mkdocs
-ls -l /mkdocs/data_docs
-if [ ! -d /mkdocs/data_docs -o ! -d /mkdocs/data_docs/.git ]; then
-  echo "Clone /mkdocs/data_docs/"
-  ls -l /mkdocs/data_docs
-  git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data_docs
-  ln -s /mkdocs/data_docs/extensions /mkdocs/data/docs
+if [ ! -d /mkdocs/data -o ! -d /mkdocs/data/.git ]; then
+  echo "Clone: /mkdocs/data/"
+  git clone -b master --depth=1 https://github.com/Magestore/Docs.git /mkdocs/data
 else
-  echo "Pull from github"
-  pushd /mkdocs/data_docs/
+  echo "Pull: /mkdocs/data/"
+  pushd /mkdocs/data/
   git_status_check=$( git fetch && _check_git )
   if [ "$git_status_check" = "pull" ]; then
-    echo "Pull from github"
     git pull
     git clean -fdx
   fi
   popd
 fi
-if [ ! -f /mkdocs/data/docs ]; then
-  ln -s /mkdocs/data_docs/extensions /mkdocs/data/docs
-fi
 
 # copy theme
-cp -rp /mkdocs/data/docs_theme/* /mkdocs/data/docs/
+cp -rp /mkdocs/docs/* /mkdocs/data/extensions/
+cp -rp /mkdocs/mytheme /mkdocs/data/mytheme
+cp -rp /mkdocs/mkdocs.yml /mkdocs/data/mkdocs.yml
 
 # build mkdocs
 echo "MkDocs build"
@@ -63,5 +55,5 @@ pwd
 ls -l
 sudo mkdocs build
 sudo mkdocs gh-deploy -q --force --remote-name https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/Magestore/Docs.git
-popd
+
 echo "Build complete!"
