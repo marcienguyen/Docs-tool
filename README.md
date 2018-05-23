@@ -21,7 +21,7 @@ Run the docker compose
 $ sudo docker-compose up
 ```
 
-### # Other way:
+## Other way:
 
 1. Rebuild the docker image
 ```
