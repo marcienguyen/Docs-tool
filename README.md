@@ -4,10 +4,20 @@
 ### #Step 1 Install docker-ce
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ### #Step 2 Build and run:
+Clone this source code to your disk:
 ```
 $ git clone https://github.com/Magestore/Docs-tool.git
 $ cd Docs-tool
 $ cp .env.example .env # and modify environment variables
+```
+Open and edit .env file:
+```
+$ vi .env
+```
+write the token: ```GITHUB_TOKEN=[contact with your Sysadmin]```
+
+Run the docker compose
+```
 $ sudo docker-compose up
 ```
 
