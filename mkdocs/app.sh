@@ -45,9 +45,9 @@ else
 fi
 
 # copy theme
-cp -rp /mkdocs/docs/* /mkdocs/data/extensions/
-cp -rp /mkdocs/mytheme /mkdocs/data/mytheme
-cp -rp /mkdocs/mkdocs.yml /mkdocs/data/mkdocs.yml
+cp -rpf /mkdocs/docs/* /mkdocs/data/extensions/
+cp -rpf /mkdocs/mytheme /mkdocs/data/mytheme
+cp -rpf /mkdocs/mkdocs.yml /mkdocs/data/mkdocs.yml
 
 # build mkdocs
 echo "MkDocs build"
