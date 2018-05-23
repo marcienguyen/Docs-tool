@@ -2,6 +2,7 @@
 
 ## Quick use:
 ### #Step 1 Install docker-ce
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ### #Step 2 Build and run:
 ```
 $ git clone https://github.com/Magestore/Docs-tool.git
