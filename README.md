@@ -1,8 +1,8 @@
 # Use Guide
 
 ## Quick use:
-### #1 Install docker-ce
-### #2 Build and run:
+### #Step 1 Install docker-ce
+### #Step 2 Build and run:
 ```
 $ git clone https://github.com/Magestore/Docs-tool.git
 $ cd Docs-tool
@@ -10,7 +10,7 @@ $ cp .env.example .env # and modify environment variables
 $ sudo docker-compose up
 ```
 
-### # Other:
+### # Other way:
 
 1. Rebuild the docker image
 ```
