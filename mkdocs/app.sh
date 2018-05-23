@@ -46,7 +46,7 @@ fi
 
 # copy theme
 cp -rpf /mkdocs/docs/* /mkdocs/data/extensions/
-cp -rpf /mkdocs/mytheme /mkdocs/data/mytheme
+cp -rpf /mkdocs/mytheme/* /mkdocs/data/mytheme/
 cp -rpf /mkdocs/mkdocs.yml /mkdocs/data/mkdocs.yml
 
 # build mkdocs
